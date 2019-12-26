@@ -18,6 +18,9 @@
 		94235B5D23B522B3002E87BA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B5B23B522B3002E87BA /* HomeViewController.xib */; };
 		94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */; };
 		94235B6423B52DD8002E87BA /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */; };
+		94235B7423B5335E002E87BA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B7323B5335E002E87BA /* BaseViewController.swift */; };
+		94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B7523B53371002E87BA /* BaseViewModel.swift */; };
+		94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B7823B533B6002E87BA /* ActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		94235B5B23B522B3002E87BA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		94235B7323B5335E002E87BA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		94235B7523B53371002E87BA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		94235B7823B533B6002E87BA /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +117,9 @@
 		94235B5823B5228C002E87BA /* AppLayer */ = {
 			isa = PBXGroup;
 			children = (
-				94235B5923B52299002E87BA /* HomeScreen */,
+				94235B7723B53398002E87BA /* Utilites */,
+				94235B7223B5334C002E87BA /* Base */,
+				94235B6D23B532B0002E87BA /* WeatherFeature */,
 			);
 			path = AppLayer;
 			sourceTree = "<group>";
@@ -133,6 +141,31 @@
 				94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		94235B6D23B532B0002E87BA /* WeatherFeature */ = {
+			isa = PBXGroup;
+			children = (
+				94235B5923B52299002E87BA /* HomeScreen */,
+			);
+			path = WeatherFeature;
+			sourceTree = "<group>";
+		};
+		94235B7223B5334C002E87BA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				94235B7323B5335E002E87BA /* BaseViewController.swift */,
+				94235B7523B53371002E87BA /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		94235B7723B53398002E87BA /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				94235B7823B533B6002E87BA /* ActivityIndicatorView.swift */,
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +274,11 @@
 				94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */,
 				94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */,
 				94235B3823B52100002E87BA /* ViewController.swift in Sources */,
+				94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */,
+				94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */,
 				94235B3623B52100002E87BA /* AppDelegate.swift in Sources */,
 				94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */,
+				94235B7423B5335E002E87BA /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
