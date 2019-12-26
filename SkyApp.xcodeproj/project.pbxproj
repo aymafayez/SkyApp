@@ -14,6 +14,10 @@
 		94235B4023B52102002E87BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94235B3F23B52102002E87BA /* Assets.xcassets */; };
 		94235B4323B52102002E87BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94235B4123B52102002E87BA /* LaunchScreen.storyboard */; };
 		94235B4E23B52102002E87BA /* SkyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B4D23B52102002E87BA /* SkyAppTests.swift */; };
+		94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B5A23B522B3002E87BA /* HomeViewController.swift */; };
+		94235B5D23B522B3002E87BA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B5B23B522B3002E87BA /* HomeViewController.xib */; };
+		94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */; };
+		94235B6423B52DD8002E87BA /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		94235B4923B52102002E87BA /* SkyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94235B4D23B52102002E87BA /* SkyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyAppTests.swift; sourceTree = "<group>"; };
 		94235B4F23B52103002E87BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94235B5A23B522B3002E87BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		94235B5B23B522B3002E87BA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 		94235B3423B52100002E87BA /* SkyApp */ = {
 			isa = PBXGroup;
 			children = (
+				94235B5823B5228C002E87BA /* AppLayer */,
 				94235B3523B52100002E87BA /* AppDelegate.swift */,
 				94235B3723B52100002E87BA /* ViewController.swift */,
 				94235B3923B52100002E87BA /* Main.storyboard */,
@@ -97,6 +106,33 @@
 				94235B4F23B52103002E87BA /* Info.plist */,
 			);
 			path = SkyAppTests;
+			sourceTree = "<group>";
+		};
+		94235B5823B5228C002E87BA /* AppLayer */ = {
+			isa = PBXGroup;
+			children = (
+				94235B5923B52299002E87BA /* HomeScreen */,
+			);
+			path = AppLayer;
+			sourceTree = "<group>";
+		};
+		94235B5923B52299002E87BA /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				94235B5E23B52D9F002E87BA /* View */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		94235B5E23B52D9F002E87BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94235B5A23B522B3002E87BA /* HomeViewController.swift */,
+				94235B5B23B522B3002E87BA /* HomeViewController.xib */,
+				94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */,
+				94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +219,8 @@
 				94235B4323B52102002E87BA /* LaunchScreen.storyboard in Resources */,
 				94235B4023B52102002E87BA /* Assets.xcassets in Resources */,
 				94235B3B23B52100002E87BA /* Main.storyboard in Resources */,
+				94235B6423B52DD8002E87BA /* HomeTableViewCell.xib in Resources */,
+				94235B5D23B522B3002E87BA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */,
+				94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */,
 				94235B3823B52100002E87BA /* ViewController.swift in Sources */,
 				94235B3623B52100002E87BA /* AppDelegate.swift in Sources */,
+				94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
