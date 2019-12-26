@@ -12,6 +12,6 @@ import UIKit
 protocol WeatherRouterProtocol {
     func start(navigationController: UINavigationController)
     func terminate()
-    func next(from viewController: UIViewController)
+    func next(navigationController: UINavigationController)
     func back(from viewController: UIViewController)
 }

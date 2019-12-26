@@ -1,5 +1,5 @@
 //
-//  HomeViewController + TableViewProtocols.swift
+//  DetailsViewController + TableViewProtocols.swift
 //  SkyApp
 //
 //  Created by Guest2 on 12/26/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -20,13 +20,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellEnum.CellReuseIdentifier.rawValue) as? HomeTableViewCell
-        cell?.selectionStyle = .none
+        let cell = tableView.dequeueReusableCell(withIdentifier: DetailsTableViewCellEnum.CellReuseIdentifier.rawValue) as? DetailsTableViewCell
         return  cell ?? UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router.next(navigationController: self.navigationController!)
     }
     
 }
