@@ -131,9 +131,8 @@
 		94235B5923B52299002E87BA /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				94235B7D23B5349E002E87BA /* WeatherRouterProtocol.swift */,
-				94235B7F23B534B4002E87BA /* WeatherRouter.swift */,
 				94235B5E23B52D9F002E87BA /* View */,
+				94235B8123B5352E002E87BA /* ViewModel */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -152,6 +151,8 @@
 		94235B6D23B532B0002E87BA /* WeatherFeature */ = {
 			isa = PBXGroup;
 			children = (
+				94235B7D23B5349E002E87BA /* WeatherRouterProtocol.swift */,
+				94235B7F23B534B4002E87BA /* WeatherRouter.swift */,
 				94235B5923B52299002E87BA /* HomeScreen */,
 			);
 			path = WeatherFeature;
@@ -172,6 +173,13 @@
 				94235B7823B533B6002E87BA /* ActivityIndicatorView.swift */,
 			);
 			path = Utilites;
+			sourceTree = "<group>";
+		};
+		94235B8123B5352E002E87BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
