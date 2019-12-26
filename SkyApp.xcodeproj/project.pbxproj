@@ -32,6 +32,13 @@
 		94235B9123B5608C002E87BA /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B8F23B5608C002E87BA /* DetailsTableViewCell.xib */; };
 		94235B9523B562D3002E87BA /* DetialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B9423B562D3002E87BA /* DetialsViewModel.swift */; };
 		94235B9723B56397002E87BA /* DetailsViewController + TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B9623B56397002E87BA /* DetailsViewController + TableViewProtocols.swift */; };
+		94235B9C23B567CB002E87BA /* ChooseCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B9A23B567CB002E87BA /* ChooseCountryViewController.swift */; };
+		94235B9D23B567CB002E87BA /* ChooseCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B9B23B567CB002E87BA /* ChooseCountryViewController.xib */; };
+		94235BA223B568AE002E87BA /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA023B568AE002E87BA /* CountryTableViewCell.swift */; };
+		94235BA323B568AE002E87BA /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235BA123B568AE002E87BA /* CountryTableViewCell.xib */; };
+		94235BA623B569E1002E87BA /* ChooseCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */; };
+		94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA723B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift */; };
+		94235BAA23B56DB7002E87BA /* ChooseCountryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA923B56DB7002E87BA /* ChooseCountryDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +81,13 @@
 		94235B8F23B5608C002E87BA /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
 		94235B9423B562D3002E87BA /* DetialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetialsViewModel.swift; sourceTree = "<group>"; };
 		94235B9623B56397002E87BA /* DetailsViewController + TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsViewController + TableViewProtocols.swift"; sourceTree = "<group>"; };
+		94235B9A23B567CB002E87BA /* ChooseCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewController.swift; sourceTree = "<group>"; };
+		94235B9B23B567CB002E87BA /* ChooseCountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseCountryViewController.xib; sourceTree = "<group>"; };
+		94235BA023B568AE002E87BA /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		94235BA123B568AE002E87BA /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewModel.swift; sourceTree = "<group>"; };
+		94235BA723B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseCountryViewContorller + TableViewProtocols.swift"; sourceTree = "<group>"; };
+		94235BA923B56DB7002E87BA /* ChooseCountryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +188,7 @@
 				94235B7F23B534B4002E87BA /* WeatherRouter.swift */,
 				94235B5923B52299002E87BA /* HomeScreen */,
 				94235B8823B55F68002E87BA /* DetailsScreen */,
+				94235B9823B5673F002E87BA /* ChooseCountry */,
 			);
 			path = WeatherFeature;
 			sourceTree = "<group>";
@@ -229,6 +244,36 @@
 			isa = PBXGroup;
 			children = (
 				94235B9423B562D3002E87BA /* DetialsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94235B9823B5673F002E87BA /* ChooseCountry */ = {
+			isa = PBXGroup;
+			children = (
+				94235BA923B56DB7002E87BA /* ChooseCountryDelegate.swift */,
+				94235B9923B567A8002E87BA /* View */,
+				94235BA423B569C2002E87BA /* ViewModel */,
+			);
+			path = ChooseCountry;
+			sourceTree = "<group>";
+		};
+		94235B9923B567A8002E87BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94235B9A23B567CB002E87BA /* ChooseCountryViewController.swift */,
+				94235B9B23B567CB002E87BA /* ChooseCountryViewController.xib */,
+				94235BA023B568AE002E87BA /* CountryTableViewCell.swift */,
+				94235BA123B568AE002E87BA /* CountryTableViewCell.xib */,
+				94235BA723B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94235BA423B569C2002E87BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -318,7 +363,9 @@
 				94235B4023B52102002E87BA /* Assets.xcassets in Resources */,
 				94235B3B23B52100002E87BA /* Main.storyboard in Resources */,
 				94235B6423B52DD8002E87BA /* HomeTableViewCell.xib in Resources */,
+				94235B9D23B567CB002E87BA /* ChooseCountryViewController.xib in Resources */,
 				94235B5D23B522B3002E87BA /* HomeViewController.xib in Resources */,
+				94235BA323B568AE002E87BA /* CountryTableViewCell.xib in Resources */,
 				94235B8C23B56009002E87BA /* DetailsViewController.xib in Resources */,
 				94235B9123B5608C002E87BA /* DetailsTableViewCell.xib in Resources */,
 			);
@@ -338,6 +385,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94235B9C23B567CB002E87BA /* ChooseCountryViewController.swift in Sources */,
+				94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */,
 				94235B7E23B5349E002E87BA /* WeatherRouterProtocol.swift in Sources */,
 				94235B8323B5359C002E87BA /* HomeViewModel.swift in Sources */,
 				94235B8023B534B4002E87BA /* WeatherRouter.swift in Sources */,
@@ -346,12 +395,15 @@
 				94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */,
 				94235B3823B52100002E87BA /* ViewController.swift in Sources */,
 				94235B9023B5608C002E87BA /* DetailsTableViewCell.swift in Sources */,
+				94235BA223B568AE002E87BA /* CountryTableViewCell.swift in Sources */,
 				94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */,
 				94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */,
 				94235B3623B52100002E87BA /* AppDelegate.swift in Sources */,
 				94235B9723B56397002E87BA /* DetailsViewController + TableViewProtocols.swift in Sources */,
 				94235B8723B538C1002E87BA /* HomeViewController + TableViewProtocols.swift in Sources */,
 				94235B8523B53830002E87BA /* Identifiers + FilesNames.swift in Sources */,
+				94235BA623B569E1002E87BA /* ChooseCountryViewModel.swift in Sources */,
+				94235BAA23B56DB7002E87BA /* ChooseCountryDelegate.swift in Sources */,
 				94235B8B23B56009002E87BA /* DetailsViewController.swift in Sources */,
 				94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */,
 				94235B7423B5335E002E87BA /* BaseViewController.swift in Sources */,

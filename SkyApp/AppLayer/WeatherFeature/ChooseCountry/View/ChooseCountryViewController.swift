@@ -1,40 +1,41 @@
 //
-//  HomeViewController.swift
+//  ChooseCountryViewController.swift
 //  SkyApp
 //
-//  Created by Guest2 on 12/26/19.
+//  Created by Guest2 on 12/27/19.
 //  Copyright © 2019 Sky. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: BaseViewController {
-    
-    
+class ChooseCountryViewController: BaseViewController {
+
     // MARK: - Properties
-    let viewModel: HomeViewModel
+    let viewModel: ChooseCountryViewModel
     let router: WeatherRouter
+    weak var delegate: ChooseCountryDelegate?
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Initializers
-    init(viewModel: HomeViewModel, router: WeatherRouter) {
+    init(viewModel: ChooseCountryViewModel, router: WeatherRouter) {
         self.viewModel = viewModel
         self.router = router
         super.init(viewModel: viewModel)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = HomeViewModel()
+        viewModel = ChooseCountryViewModel()
         self.router = WeatherRouter()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
-        viewModel = HomeViewModel()
+        viewModel = ChooseCountryViewModel()
         self.router = WeatherRouter()
         super.init(nibName: nibName, bundle: bundle)
     }
-
+    
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,23 +43,21 @@ class HomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true 
-    }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: HomeTableViewCellEnum.nibName.rawValue, bundle: nil), forCellReuseIdentifier: HomeTableViewCellEnum.CellReuseIdentifier.rawValue)
-        tableView.backgroundView = UIImageView(image: UIImage(named: ImagesEnum.HomeBackGroundImage.rawValue))
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: SearchCountryTableViewCellEnum.nibName.rawValue, bundle: nil), forCellReuseIdentifier: SearchCountryTableViewCellEnum.CellReuseIdentifier.rawValue)
     }
 
-    @IBAction func addButtonDidPressed(_ sender: Any) {
-        let vm = ChooseCountryViewModel()
-        let vc = ChooseCountryViewController(viewModel: vm, router: router)
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func doneButtonIsPressed(_ sender: Any) {
+        delegate?.didSelectCurrency(country: "")
+        self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func cancelButtonIsPressed(_ sender: Any) {
+         self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

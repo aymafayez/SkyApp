@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,17 +18,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bra-ET-NAG">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmL-aZ-Qhf">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="QED-mQ-s0C">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,25 +40,36 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RJd-Ig-IJb">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="792"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="742"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cD-N3-549">
-                            <rect key="frame" x="0.0" y="792" width="414" height="70"/>
+                            <rect key="frame" x="0.0" y="742" width="375" height="70"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtonViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-NI-SqW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-7f-GDf">
-                                    <rect key="frame" x="191" y="19" width="32" height="32"/>
+                                    <rect key="frame" x="312.33333333333331" y="10" width="42.666666666666686" height="42.666666666666664"/>
                                     <state key="normal" image="PlusIcon"/>
+                                    <connections>
+                                        <action selector="addButtonDidPressed:" destination="-1" eventType="touchUpInside" id="j4Q-d4-cJo"/>
+                                    </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY8-vc-lbj">
+                                    <rect key="frame" x="20" y="23" width="86" height="24"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.20784313725490194" green="0.38431372549019605" blue="0.54509803921568623" alpha="0.84773877640845074" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="T21-7f-GDf" firstAttribute="centerY" secondItem="9cD-N3-549" secondAttribute="centerY" id="IgH-OU-R84"/>
-                                <constraint firstItem="T21-7f-GDf" firstAttribute="centerX" secondItem="9cD-N3-549" secondAttribute="centerX" id="L1F-vF-P9O"/>
+                                <constraint firstItem="eY8-vc-lbj" firstAttribute="centerY" secondItem="zgR-NI-SqW" secondAttribute="centerY" id="20O-fb-edS"/>
+                                <constraint firstAttribute="trailing" secondItem="T21-7f-GDf" secondAttribute="trailing" constant="20" id="H4P-wI-Ygs"/>
                                 <constraint firstItem="zgR-NI-SqW" firstAttribute="leading" secondItem="9cD-N3-549" secondAttribute="leading" id="MJI-QG-xgj"/>
+                                <constraint firstItem="T21-7f-GDf" firstAttribute="top" secondItem="9cD-N3-549" secondAttribute="top" constant="10" id="MsN-o9-pcT"/>
+                                <constraint firstItem="eY8-vc-lbj" firstAttribute="leading" secondItem="9cD-N3-549" secondAttribute="leading" constant="20" id="Ndg-TA-jkX"/>
                                 <constraint firstAttribute="trailing" secondItem="zgR-NI-SqW" secondAttribute="trailing" id="Wlc-Vb-okx"/>
                                 <constraint firstAttribute="bottom" secondItem="zgR-NI-SqW" secondAttribute="bottom" id="dBu-0l-FUE"/>
                                 <constraint firstItem="zgR-NI-SqW" firstAttribute="top" secondItem="9cD-N3-549" secondAttribute="top" id="ou2-lh-ak7"/>
@@ -84,8 +95,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bra-ET-NAG" secondAttribute="bottom" id="1Go-5y-l2H"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bra-ET-NAG" secondAttribute="trailing" id="Ur6-NN-TCt"/>
+                <constraint firstAttribute="bottom" secondItem="bra-ET-NAG" secondAttribute="bottom" id="aAb-BR-gGD"/>
                 <constraint firstItem="bra-ET-NAG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ywu-VN-Uxs"/>
                 <constraint firstItem="bra-ET-NAG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z7h-9q-MS7"/>
             </constraints>
@@ -96,6 +107,6 @@
     <resources>
         <image name="ButtonViewImage" width="1600" height="1200"/>
         <image name="HomeBackGround" width="1600" height="1200"/>
-        <image name="PlusIcon" width="32" height="32"/>
+        <image name="PlusIcon" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>

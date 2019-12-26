@@ -18,6 +18,12 @@ enum DetailsTableViewCellEnum: String {
     case CellReuseIdentifier = "DetailsTableViewCellID"
 }
 
+enum SearchCountryTableViewCellEnum: String {
+    case nibName = "CountryTableViewCell"
+    case CellReuseIdentifier = "CountryTableViewCellID"
+}
+
 enum ImagesEnum: String {
     case HomeBackGroundImage = "HomeBackGround"
+    case DetailsBarImage = "DetialsBarImage"
 }

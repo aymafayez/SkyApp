@@ -38,7 +38,18 @@ class DetailsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupNaviagtionBar()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func setupNaviagtionBar() {
+        let img = UIImage(named: ImagesEnum.DetailsBarImage.rawValue)
+        navigationController?.navigationBar.setBackgroundImage(img, for: .default)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     private func setupTableView() {
