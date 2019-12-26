@@ -17,7 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupRootViewController()
         return true
+    }
+    
+    private func setupRootViewController() {
+        let navVC = UINavigationController()
+        navVC.navigationBar.isHidden = false
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
+        let router = WeatherRouter()
+        router.start(navigationController: navVC)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

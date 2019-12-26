@@ -12,7 +12,9 @@ import UIKit
 class WeatherRouter: WeatherRouterProtocol {
     
     func start(navigationController: UINavigationController) {
-       
+        let vm = HomeViewModel()
+        let vc = HomeViewController(viewModel: vm, router: self)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func next(from viewController: UIViewController) {

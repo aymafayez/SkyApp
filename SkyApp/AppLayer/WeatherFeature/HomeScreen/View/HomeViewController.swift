@@ -8,12 +8,43 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
+    
+    
+    // MARK: - Properties
+    let viewModel: HomeViewModel
+    let router: WeatherRouter
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Initializers
+    init(viewModel: HomeViewModel, router: WeatherRouter) {
+        self.viewModel = viewModel
+        self.router = router
+        super.init(viewModel: viewModel)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        viewModel = HomeViewModel()
+        self.router = WeatherRouter()
+        super.init(coder: aDecoder)
+    }
+    
+    public override init(nibName: String?, bundle: Bundle?) {
+        viewModel = HomeViewModel()
+        self.router = WeatherRouter()
+        super.init(nibName: nibName, bundle: bundle)
+    }
 
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
         // Do any additional setup after loading the view.
+    }
+    private func setupTableView() {
+        tableView.register(UINib(nibName: HomeTableViewCellEnum.nibName.rawValue, bundle: nil), forCellReuseIdentifier: HomeTableViewCellEnum.CellReuseIdentifier.rawValue)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
 
