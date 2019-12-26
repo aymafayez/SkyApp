@@ -25,41 +25,63 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cairo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkx-HO-hJp">
                                 <rect key="frame" x="197.5" y="10" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mostly Clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATk-hP-yVI">
                                 <rect key="frame" x="187" y="51" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nus-7z-UMy">
                                 <rect key="frame" x="210.5" y="82" width="49" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFA-Jc-c2d">
                                 <rect key="frame" x="10" y="145.5" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tg-ib-XYx">
+                                <rect key="frame" x="10" y="175.5" width="450" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="knZ-LJ-4XB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJl-w0-kdx">
+                                <rect key="frame" x="410" y="116.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="b6p-vG-FKv"/>
+                                    <constraint firstAttribute="height" constant="50" id="fyX-8g-JFw"/>
+                                </constraints>
+                                <state key="normal" image="deleteIcon"/>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ATk-hP-yVI" firstAttribute="centerX" secondItem="Qkx-HO-hJp" secondAttribute="centerX" id="6ad-4f-7S8"/>
-                            <constraint firstAttribute="bottom" secondItem="vFA-Jc-c2d" secondAttribute="bottom" constant="10" id="FDE-iD-gqW"/>
+                            <constraint firstItem="6tg-ib-XYx" firstAttribute="leading" secondItem="lKb-H9-Fb5" secondAttribute="leading" constant="10" id="8u7-0K-8o2"/>
+                            <constraint firstItem="vFA-Jc-c2d" firstAttribute="leading" secondItem="6tg-ib-XYx" secondAttribute="leading" id="8vZ-4Q-Mhf"/>
+                            <constraint firstItem="6tg-ib-XYx" firstAttribute="top" secondItem="vFA-Jc-c2d" secondAttribute="bottom" constant="9" id="DDU-Pf-Vx0"/>
                             <constraint firstItem="Nus-7z-UMy" firstAttribute="centerX" secondItem="ATk-hP-yVI" secondAttribute="centerX" id="Gy9-BG-5A9"/>
+                            <constraint firstAttribute="bottom" secondItem="6tg-ib-XYx" secondAttribute="bottom" id="Jyy-TS-K71"/>
                             <constraint firstItem="ATk-hP-yVI" firstAttribute="top" secondItem="Qkx-HO-hJp" secondAttribute="bottom" constant="5" id="LHC-IW-L5v"/>
                             <constraint firstItem="Nus-7z-UMy" firstAttribute="top" secondItem="ATk-hP-yVI" secondAttribute="bottom" constant="10" id="LjT-sa-614"/>
-                            <constraint firstItem="vFA-Jc-c2d" firstAttribute="leading" secondItem="lKb-H9-Fb5" secondAttribute="leading" constant="10" id="TSR-Xf-1rd"/>
+                            <constraint firstItem="6tg-ib-XYx" firstAttribute="top" secondItem="FJl-w0-kdx" secondAttribute="bottom" constant="9" id="Rri-Ci-CLX"/>
                             <constraint firstItem="Qkx-HO-hJp" firstAttribute="centerX" secondItem="lKb-H9-Fb5" secondAttribute="centerX" id="WLG-ZQ-waz"/>
                             <constraint firstItem="Qkx-HO-hJp" firstAttribute="top" secondItem="lKb-H9-Fb5" secondAttribute="top" constant="10" id="hLV-Yy-TeR"/>
+                            <constraint firstItem="FJl-w0-kdx" firstAttribute="trailing" secondItem="6tg-ib-XYx" secondAttribute="trailing" id="mxn-VU-9Bm"/>
                             <constraint firstItem="vFA-Jc-c2d" firstAttribute="top" secondItem="Nus-7z-UMy" secondAttribute="bottom" constant="15.5" id="smK-pI-7e3"/>
+                            <constraint firstAttribute="trailing" secondItem="6tg-ib-XYx" secondAttribute="trailing" constant="10" id="uaD-LA-u1n"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="lKb-H9-Fb5" secondAttribute="trailing" id="Lic-Wz-5yf"/>
                     <constraint firstItem="lKb-H9-Fb5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MXI-Bt-wlm"/>
@@ -67,8 +89,12 @@
                     <constraint firstAttribute="bottom" secondItem="lKb-H9-Fb5" secondAttribute="bottom" id="s1o-g7-oEw"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="244.92753623188409" y="179.12946428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="deleteIcon" width="24" height="24"/>
+    </resources>
 </document>

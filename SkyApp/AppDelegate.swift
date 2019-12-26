@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupRootViewController() {
         let navVC = UINavigationController()
-        navVC.navigationBar.isHidden = false
+        navVC.navigationBar.isHidden = true 
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         let router = WeatherRouter()

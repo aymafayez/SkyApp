@@ -43,6 +43,7 @@ class HomeViewController: BaseViewController {
     }
     private func setupTableView() {
         tableView.register(UINib(nibName: HomeTableViewCellEnum.nibName.rawValue, bundle: nil), forCellReuseIdentifier: HomeTableViewCellEnum.CellReuseIdentifier.rawValue)
+        tableView.backgroundView = UIImageView(image: UIImage(named: ImagesEnum.HomeBackGroundImage.rawValue))
         tableView.delegate = self
         tableView.dataSource = self
     }

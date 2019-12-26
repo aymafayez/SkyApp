@@ -12,3 +12,7 @@ enum HomeTableViewCellEnum: String {
     case nibName = "HomeTableViewCell"
     case CellReuseIdentifier = "HomeTableViewCellID"
 }
+
+enum ImagesEnum: String {
+    case HomeBackGroundImage = "HomeBackGround"
+}
