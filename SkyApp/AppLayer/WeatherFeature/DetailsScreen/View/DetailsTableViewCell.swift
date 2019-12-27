@@ -10,6 +10,8 @@ import UIKit
 
 class DetailsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

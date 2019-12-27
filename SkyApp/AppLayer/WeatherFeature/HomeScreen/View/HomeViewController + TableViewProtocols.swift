@@ -30,7 +30,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router.next(navigationController: self.navigationController!)
+        router.next(navigationController: self.navigationController!, id: citiesList[indexPath.row].id)
     }
     
 }

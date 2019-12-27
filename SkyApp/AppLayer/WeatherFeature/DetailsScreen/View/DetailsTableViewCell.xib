@@ -52,6 +52,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dayLabel" destination="ZpI-cW-eg9" id="fCH-nl-LMs"/>
+                <outlet property="tempLabel" destination="nV5-0b-tfy" id="fC8-Mu-JUB"/>
+            </connections>
             <point key="canvasLocation" x="140.57971014492756" y="134.59821428571428"/>
         </tableViewCell>
     </objects>

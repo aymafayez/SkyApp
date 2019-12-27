@@ -14,6 +14,7 @@ class DetailsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     let viewModel: DetailsViewModel
     let router: WeatherRouter
+    var forecastList = [ForecastModel]()
     
     // MARK: - Initializers
     init(viewModel: DetailsViewModel, router: WeatherRouter) {
@@ -23,13 +24,13 @@ class DetailsViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = DetailsViewModel()
+        viewModel = DetailsViewModel(id: 0)
         self.router = WeatherRouter()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
-        viewModel = DetailsViewModel()
+        viewModel = DetailsViewModel(id: 0)
         self.router = WeatherRouter()
         super.init(nibName: nibName, bundle: bundle)
     }
@@ -39,6 +40,7 @@ class DetailsViewController: BaseViewController {
         super.viewDidLoad()
         setupTableView()
         setupNaviagtionBar()
+        getforecastList()
         // Do any additional setup after loading the view.
     }
     
@@ -57,6 +59,17 @@ class DetailsViewController: BaseViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: ImagesEnum.HomeBackGroundImage.rawValue))
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func getforecastList() {
+        viewModel.getFiveDaysForecast(onSuccess: { [weak self] List in
+            self?.forecastList = List
+            self?.tableView.reloadData()
+        }, onAPIError: { [weak self] error in
+            self?.showErrorView(title: "error", description: error)
+        }, onConnectionError:  { [weak self] error in
+            self?.showErrorView(title: "error", description: error)
+        })
     }
 
     /*

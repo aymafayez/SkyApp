@@ -27,3 +27,6 @@ enum ImagesEnum: String {
     case HomeBackGroundImage = "HomeBackGround"
     case DetailsBarImage = "DetialsBarImage"
 }
+
+var backEndDateFormat = "yyyy-MM-dd HH:mm:ss"
+var appDateFormat = "dd-MM-yyyy HH:mm"

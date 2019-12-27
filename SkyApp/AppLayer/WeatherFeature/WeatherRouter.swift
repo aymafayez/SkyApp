@@ -17,8 +17,8 @@ class WeatherRouter: WeatherRouterProtocol {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func next(navigationController: UINavigationController) {
-        let vm = DetailsViewModel()
+    func next(navigationController: UINavigationController, id: Int) {
+        let vm = DetailsViewModel(id: id)
         let vc = DetailsViewController(viewModel: vm, router: self)
         navigationController.pushViewController(vc, animated: true)
     }
