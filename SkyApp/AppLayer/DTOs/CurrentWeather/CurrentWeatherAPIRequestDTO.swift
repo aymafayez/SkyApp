@@ -1,5 +1,5 @@
 //
-//  FiveDaysForecastAPIRequestDTO.swift
+//  CurrentWeatherAPIRequestDTO.swift
 //  SkyApp
 //
 //  Created by Guest2 on 12/27/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct  FiveDaysWeatherAPIRequestDTO: Codable {
+struct  CurrentWeatherAPIRequestDTO: Codable {
     let id: Int?
     let lat: Double?
     let lon: Double?
@@ -27,4 +27,3 @@ struct  FiveDaysWeatherAPIRequestDTO: Codable {
     }
     
 }
-

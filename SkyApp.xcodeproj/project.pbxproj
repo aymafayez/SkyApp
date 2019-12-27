@@ -39,15 +39,12 @@
 		94235BA623B569E1002E87BA /* ChooseCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */; };
 		94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA723B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift */; };
 		94235BAA23B56DB7002E87BA /* ChooseCountryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA923B56DB7002E87BA /* ChooseCountryDelegate.swift */; };
-		9452652223B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */; };
-		9452652423B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */; };
 		9452652723B62404001415B1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652623B62404001415B1 /* APIError.swift */; };
 		9452652923B6241A001415B1 /* RequestExecuterCreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652823B6241A001415B1 /* RequestExecuterCreatorFactory.swift */; };
 		9452652B23B62431001415B1 /* BaseAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652A23B62431001415B1 /* BaseAPIProtocol.swift */; };
 		9452652D23B62441001415B1 /* RequestExecuterCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652C23B62441001415B1 /* RequestExecuterCreator.swift */; };
 		9452652F23B62454001415B1 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652E23B62454001415B1 /* BaseAPI.swift */; };
 		9452653123B6248A001415B1 /* APIManagerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653023B6248A001415B1 /* APIManagerConfiguration.swift */; };
-		9452653423B624CD001415B1 /* FiveDaysForecastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653323B624CD001415B1 /* FiveDaysForecastAPI.swift */; };
 		9452653823B6253F001415B1 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653723B6253F001415B1 /* ParameterEncoder.swift */; };
 		9452653A23B62552001415B1 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653923B62552001415B1 /* URLParameterEncoder.swift */; };
 		9452653C23B62569001415B1 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653B23B62569001415B1 /* JSONParameterEncoder.swift */; };
@@ -55,6 +52,10 @@
 		9452654123B625CB001415B1 /* URLRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654023B625CB001415B1 /* URLRequestExecuter.swift */; };
 		9452654423B625F7001415B1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654323B625F6001415B1 /* NetworkError.swift */; };
 		9452654723B62618001415B1 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654623B62618001415B1 /* RequestConfig.swift */; };
+		9452654B23B63394001415B1 /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654A23B63394001415B1 /* CurrentWeatherModel.swift */; };
+		9452654D23B63539001415B1 /* CurrentWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654C23B63539001415B1 /* CurrentWeatherAPI.swift */; };
+		9452655023B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654F23B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift */; };
+		9452655223B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452655123B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,10 @@
 		9452654023B625CB001415B1 /* URLRequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExecuter.swift; sourceTree = "<group>"; };
 		9452654323B625F6001415B1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		9452654623B62618001415B1 /* RequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
+		9452654A23B63394001415B1 /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
+		9452654C23B63539001415B1 /* CurrentWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPI.swift; sourceTree = "<group>"; };
+		9452654F23B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPIRequestDTO.swift; sourceTree = "<group>"; };
+		9452655123B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPIResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +205,7 @@
 			children = (
 				94235B5E23B52D9F002E87BA /* View */,
 				94235B8123B5352E002E87BA /* ViewModel */,
+				9452654923B63377001415B1 /* Model */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 		9452652023B6231D001415B1 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				9452654E23B6354B001415B1 /* CurrentWeather */,
 				9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */,
 				9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */,
 			);
@@ -327,6 +334,7 @@
 			children = (
 				9452653223B624A0001415B1 /* BaseAPI */,
 				9452653323B624CD001415B1 /* FiveDaysForecastAPI.swift */,
+				9452654C23B63539001415B1 /* CurrentWeatherAPI.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -388,6 +396,23 @@
 				9452654623B62618001415B1 /* RequestConfig.swift */,
 			);
 			path = RequestConfig;
+			sourceTree = "<group>";
+		};
+		9452654923B63377001415B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9452654A23B63394001415B1 /* CurrentWeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9452654E23B6354B001415B1 /* CurrentWeather */ = {
+			isa = PBXGroup;
+			children = (
+				9452654F23B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift */,
+				9452655123B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift */,
+			);
+			path = CurrentWeather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,16 +523,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				94235B9C23B567CB002E87BA /* ChooseCountryViewController.swift in Sources */,
+				9452654B23B63394001415B1 /* CurrentWeatherModel.swift in Sources */,
 				94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */,
-				9452652423B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift in Sources */,
 				94235B7E23B5349E002E87BA /* WeatherRouterProtocol.swift in Sources */,
-				9452652223B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */,
 				94235B8323B5359C002E87BA /* HomeViewModel.swift in Sources */,
 				94235B8023B534B4002E87BA /* WeatherRouter.swift in Sources */,
 				94235B9523B562D3002E87BA /* DetialsViewModel.swift in Sources */,
 				9452654123B625CB001415B1 /* URLRequestExecuter.swift in Sources */,
 				94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */,
-				9452653423B624CD001415B1 /* FiveDaysForecastAPI.swift in Sources */,
 				9452653F23B625B4001415B1 /* URLSessionRequestExecuter.swift in Sources */,
 				94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */,
 				94235B3823B52100002E87BA /* ViewController.swift in Sources */,
@@ -518,6 +541,7 @@
 				94235BA223B568AE002E87BA /* CountryTableViewCell.swift in Sources */,
 				94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */,
 				94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */,
+				9452655023B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift in Sources */,
 				94235B3623B52100002E87BA /* AppDelegate.swift in Sources */,
 				9452653823B6253F001415B1 /* ParameterEncoder.swift in Sources */,
 				94235B9723B56397002E87BA /* DetailsViewController + TableViewProtocols.swift in Sources */,
@@ -533,8 +557,10 @@
 				9452652D23B62441001415B1 /* RequestExecuterCreator.swift in Sources */,
 				9452652723B62404001415B1 /* APIError.swift in Sources */,
 				9452654723B62618001415B1 /* RequestConfig.swift in Sources */,
+				9452655223B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift in Sources */,
 				94235B7423B5335E002E87BA /* BaseViewController.swift in Sources */,
 				9452653123B6248A001415B1 /* APIManagerConfiguration.swift in Sources */,
+				9452654D23B63539001415B1 /* CurrentWeatherAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

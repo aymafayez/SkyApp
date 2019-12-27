@@ -39,6 +39,13 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        viewModel.getForecastList(onSuccess: { _ in
+            
+        }, onAPIError: { _ in
+            
+        }) { _ in
+            
+        }
         // Do any additional setup after loading the view.
     }
     
