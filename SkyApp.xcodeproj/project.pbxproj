@@ -39,6 +39,22 @@
 		94235BA623B569E1002E87BA /* ChooseCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */; };
 		94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA723B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift */; };
 		94235BAA23B56DB7002E87BA /* ChooseCountryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA923B56DB7002E87BA /* ChooseCountryDelegate.swift */; };
+		9452652223B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */; };
+		9452652423B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */; };
+		9452652723B62404001415B1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652623B62404001415B1 /* APIError.swift */; };
+		9452652923B6241A001415B1 /* RequestExecuterCreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652823B6241A001415B1 /* RequestExecuterCreatorFactory.swift */; };
+		9452652B23B62431001415B1 /* BaseAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652A23B62431001415B1 /* BaseAPIProtocol.swift */; };
+		9452652D23B62441001415B1 /* RequestExecuterCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652C23B62441001415B1 /* RequestExecuterCreator.swift */; };
+		9452652F23B62454001415B1 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652E23B62454001415B1 /* BaseAPI.swift */; };
+		9452653123B6248A001415B1 /* APIManagerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653023B6248A001415B1 /* APIManagerConfiguration.swift */; };
+		9452653423B624CD001415B1 /* FiveDaysForecastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653323B624CD001415B1 /* FiveDaysForecastAPI.swift */; };
+		9452653823B6253F001415B1 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653723B6253F001415B1 /* ParameterEncoder.swift */; };
+		9452653A23B62552001415B1 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653923B62552001415B1 /* URLParameterEncoder.swift */; };
+		9452653C23B62569001415B1 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653B23B62569001415B1 /* JSONParameterEncoder.swift */; };
+		9452653F23B625B4001415B1 /* URLSessionRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653E23B625B4001415B1 /* URLSessionRequestExecuter.swift */; };
+		9452654123B625CB001415B1 /* URLRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654023B625CB001415B1 /* URLRequestExecuter.swift */; };
+		9452654423B625F7001415B1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654323B625F6001415B1 /* NetworkError.swift */; };
+		9452654723B62618001415B1 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654623B62618001415B1 /* RequestConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +104,22 @@
 		94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewModel.swift; sourceTree = "<group>"; };
 		94235BA723B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseCountryViewContorller + TableViewProtocols.swift"; sourceTree = "<group>"; };
 		94235BA923B56DB7002E87BA /* ChooseCountryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryDelegate.swift; sourceTree = "<group>"; };
+		9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPIResponseDTO.swift; sourceTree = "<group>"; };
+		9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPIRequestDTO.swift; sourceTree = "<group>"; };
+		9452652623B62404001415B1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9452652823B6241A001415B1 /* RequestExecuterCreatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuterCreatorFactory.swift; sourceTree = "<group>"; };
+		9452652A23B62431001415B1 /* BaseAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIProtocol.swift; sourceTree = "<group>"; };
+		9452652C23B62441001415B1 /* RequestExecuterCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuterCreator.swift; sourceTree = "<group>"; };
+		9452652E23B62454001415B1 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		9452653023B6248A001415B1 /* APIManagerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerConfiguration.swift; sourceTree = "<group>"; };
+		9452653323B624CD001415B1 /* FiveDaysForecastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPI.swift; sourceTree = "<group>"; };
+		9452653723B6253F001415B1 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		9452653923B62552001415B1 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		9452653B23B62569001415B1 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		9452653E23B625B4001415B1 /* URLSessionRequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestExecuter.swift; sourceTree = "<group>"; };
+		9452654023B625CB001415B1 /* URLRequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExecuter.swift; sourceTree = "<group>"; };
+		9452654323B625F6001415B1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9452654623B62618001415B1 /* RequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +185,9 @@
 		94235B5823B5228C002E87BA /* AppLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9452653523B624EC001415B1 /* NetworkLayer */,
+				9452652523B623C4001415B1 /* APIManager */,
+				9452652023B6231D001415B1 /* DTOs */,
 				94235B7723B53398002E87BA /* Utilites */,
 				94235B7223B5334C002E87BA /* Base */,
 				94235B6D23B532B0002E87BA /* WeatherFeature */,
@@ -278,6 +313,83 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9452652023B6231D001415B1 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */,
+				9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		9452652523B623C4001415B1 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				9452653223B624A0001415B1 /* BaseAPI */,
+				9452653323B624CD001415B1 /* FiveDaysForecastAPI.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		9452653223B624A0001415B1 /* BaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9452652623B62404001415B1 /* APIError.swift */,
+				9452652823B6241A001415B1 /* RequestExecuterCreatorFactory.swift */,
+				9452652A23B62431001415B1 /* BaseAPIProtocol.swift */,
+				9452652C23B62441001415B1 /* RequestExecuterCreator.swift */,
+				9452652E23B62454001415B1 /* BaseAPI.swift */,
+				9452653023B6248A001415B1 /* APIManagerConfiguration.swift */,
+			);
+			path = BaseAPI;
+			sourceTree = "<group>";
+		};
+		9452653523B624EC001415B1 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9452654523B6260A001415B1 /* RequestConfig */,
+				9452654223B625DD001415B1 /* NetworkError */,
+				9452653623B62513001415B1 /* Encoder */,
+				9452653D23B6258B001415B1 /* URL */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		9452653623B62513001415B1 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				9452653723B6253F001415B1 /* ParameterEncoder.swift */,
+				9452653923B62552001415B1 /* URLParameterEncoder.swift */,
+				9452653B23B62569001415B1 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		9452653D23B6258B001415B1 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				9452653E23B625B4001415B1 /* URLSessionRequestExecuter.swift */,
+				9452654023B625CB001415B1 /* URLRequestExecuter.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
+		9452654223B625DD001415B1 /* NetworkError */ = {
+			isa = PBXGroup;
+			children = (
+				9452654323B625F6001415B1 /* NetworkError.swift */,
+			);
+			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		9452654523B6260A001415B1 /* RequestConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9452654623B62618001415B1 /* RequestConfig.swift */,
+			);
+			path = RequestConfig;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,26 +499,42 @@
 			files = (
 				94235B9C23B567CB002E87BA /* ChooseCountryViewController.swift in Sources */,
 				94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */,
+				9452652423B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift in Sources */,
 				94235B7E23B5349E002E87BA /* WeatherRouterProtocol.swift in Sources */,
+				9452652223B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */,
 				94235B8323B5359C002E87BA /* HomeViewModel.swift in Sources */,
 				94235B8023B534B4002E87BA /* WeatherRouter.swift in Sources */,
 				94235B9523B562D3002E87BA /* DetialsViewModel.swift in Sources */,
+				9452654123B625CB001415B1 /* URLRequestExecuter.swift in Sources */,
 				94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */,
+				9452653423B624CD001415B1 /* FiveDaysForecastAPI.swift in Sources */,
+				9452653F23B625B4001415B1 /* URLSessionRequestExecuter.swift in Sources */,
 				94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */,
 				94235B3823B52100002E87BA /* ViewController.swift in Sources */,
+				9452652F23B62454001415B1 /* BaseAPI.swift in Sources */,
 				94235B9023B5608C002E87BA /* DetailsTableViewCell.swift in Sources */,
+				9452654423B625F7001415B1 /* NetworkError.swift in Sources */,
+				9452653C23B62569001415B1 /* JSONParameterEncoder.swift in Sources */,
 				94235BA223B568AE002E87BA /* CountryTableViewCell.swift in Sources */,
 				94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */,
 				94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */,
 				94235B3623B52100002E87BA /* AppDelegate.swift in Sources */,
+				9452653823B6253F001415B1 /* ParameterEncoder.swift in Sources */,
 				94235B9723B56397002E87BA /* DetailsViewController + TableViewProtocols.swift in Sources */,
 				94235B8723B538C1002E87BA /* HomeViewController + TableViewProtocols.swift in Sources */,
 				94235B8523B53830002E87BA /* Identifiers + FilesNames.swift in Sources */,
 				94235BA623B569E1002E87BA /* ChooseCountryViewModel.swift in Sources */,
+				9452653A23B62552001415B1 /* URLParameterEncoder.swift in Sources */,
+				9452652B23B62431001415B1 /* BaseAPIProtocol.swift in Sources */,
+				9452652923B6241A001415B1 /* RequestExecuterCreatorFactory.swift in Sources */,
 				94235BAA23B56DB7002E87BA /* ChooseCountryDelegate.swift in Sources */,
 				94235B8B23B56009002E87BA /* DetailsViewController.swift in Sources */,
 				94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */,
+				9452652D23B62441001415B1 /* RequestExecuterCreator.swift in Sources */,
+				9452652723B62404001415B1 /* APIError.swift in Sources */,
+				9452654723B62618001415B1 /* RequestConfig.swift in Sources */,
 				94235B7423B5335E002E87BA /* BaseViewController.swift in Sources */,
+				9452653123B6248A001415B1 /* APIManagerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
