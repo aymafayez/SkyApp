@@ -56,6 +56,10 @@
 		9452654D23B63539001415B1 /* CurrentWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654C23B63539001415B1 /* CurrentWeatherAPI.swift */; };
 		9452655023B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452654F23B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift */; };
 		9452655223B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452655123B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift */; };
+		9452655A23B6506B001415B1 /* HomeViewController + LocationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452655923B6506B001415B1 /* HomeViewController + LocationProtocols.swift */; };
+		9452655B23B65102001415B1 /* FiveDaysForecastAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */; };
+		9452655C23B65105001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */; };
+		9452655D23B6510A001415B1 /* FiveDaysForecastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452653323B624CD001415B1 /* FiveDaysForecastAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,7 @@
 		9452654C23B63539001415B1 /* CurrentWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPI.swift; sourceTree = "<group>"; };
 		9452654F23B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPIRequestDTO.swift; sourceTree = "<group>"; };
 		9452655123B6357C001415B1 /* CurrentWeatherAPIResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPIResponseDTO.swift; sourceTree = "<group>"; };
+		9452655923B6506B001415B1 /* HomeViewController + LocationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + LocationProtocols.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +223,7 @@
 				94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */,
 				94235B6223B52DD8002E87BA /* HomeTableViewCell.xib */,
 				94235B8623B538C1002E87BA /* HomeViewController + TableViewProtocols.swift */,
+				9452655923B6506B001415B1 /* HomeViewController + LocationProtocols.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,22 +528,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9452655B23B65102001415B1 /* FiveDaysForecastAPIRequestDTO.swift in Sources */,
 				94235B9C23B567CB002E87BA /* ChooseCountryViewController.swift in Sources */,
 				9452654B23B63394001415B1 /* CurrentWeatherModel.swift in Sources */,
 				94235BA823B56AB0002E87BA /* ChooseCountryViewContorller + TableViewProtocols.swift in Sources */,
 				94235B7E23B5349E002E87BA /* WeatherRouterProtocol.swift in Sources */,
+				9452655C23B65105001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */,
 				94235B8323B5359C002E87BA /* HomeViewModel.swift in Sources */,
 				94235B8023B534B4002E87BA /* WeatherRouter.swift in Sources */,
 				94235B9523B562D3002E87BA /* DetialsViewModel.swift in Sources */,
 				9452654123B625CB001415B1 /* URLRequestExecuter.swift in Sources */,
 				94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */,
 				9452653F23B625B4001415B1 /* URLSessionRequestExecuter.swift in Sources */,
+				9452655D23B6510A001415B1 /* FiveDaysForecastAPI.swift in Sources */,
 				94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */,
 				94235B3823B52100002E87BA /* ViewController.swift in Sources */,
 				9452652F23B62454001415B1 /* BaseAPI.swift in Sources */,
 				94235B9023B5608C002E87BA /* DetailsTableViewCell.swift in Sources */,
 				9452654423B625F7001415B1 /* NetworkError.swift in Sources */,
 				9452653C23B62569001415B1 /* JSONParameterEncoder.swift in Sources */,
+				9452655A23B6506B001415B1 /* HomeViewController + LocationProtocols.swift in Sources */,
 				94235BA223B568AE002E87BA /* CountryTableViewCell.swift in Sources */,
 				94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */,
 				94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */,

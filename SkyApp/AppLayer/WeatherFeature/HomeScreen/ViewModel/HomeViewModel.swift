@@ -7,25 +7,20 @@
 //
 
 import Foundation
+import CoreLocation
 
 class HomeViewModel: BaseViewModel {
     
-    func getForecastList(onSuccess: @escaping ([CurrentWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
-      
-        getFirstElementOfForecastList(onSuccess: { _ in
-            
-        }, onAPIError: { _ in
-            
-        },onConnectionError:  { _ in
-            
-        })
+   
+    func getForecastList(lat: Double?, lon: Double?, onSuccess: @escaping ([CurrentWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+        var firstElement = CurrentWeatherModel(cityName: "", description: "", temp: 0)
+        getFirstElementOfForecastList(lat: lat, lon: lon, onSuccess: {  element in
+            firstElement = element
+        }, onAPIError: onAPIError, onConnectionError:onConnectionError)
       
     }
     
-    private func getFirstElementOfForecastList(onSuccess: @escaping (CurrentWeatherModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
-        
-            let lat  = getCurrentLocation().lat
-            let lon  = getCurrentLocation().lon
+    private func getFirstElementOfForecastList(lat: Double?, lon: Double?, onSuccess: @escaping (CurrentWeatherModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
             if let _lat = lat, let _lon = lon {
                 getFirstElement(lat: _lat, lon: _lon, onSuccess: onSuccess, onAPIError: onAPIError, onConnectionError: onConnectionError)

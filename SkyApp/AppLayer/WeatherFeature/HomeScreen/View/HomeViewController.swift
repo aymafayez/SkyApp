@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+
 
 class HomeViewController: BaseViewController {
     
@@ -14,6 +16,8 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     let viewModel: HomeViewModel
     let router: WeatherRouter
+    var locationManager: CLLocationManager?
+    var lat, lon: Double?
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Initializers
@@ -39,13 +43,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        viewModel.getForecastList(onSuccess: { _ in
-            
-        }, onAPIError: { _ in
-            
-        }) { _ in
-            
-        }
+        setupLocation()
         // Do any additional setup after loading the view.
     }
     
@@ -58,6 +56,22 @@ class HomeViewController: BaseViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: ImagesEnum.HomeBackGroundImage.rawValue))
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func setupLocation() {
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestLocation()
+    }
+    
+    func getWeatherList() {
+        viewModel.getForecastList(lat: lat, lon: lon, onSuccess: { _ in
+            
+        }, onAPIError: { _ in
+            
+        }) { _ in
+            
+        }
     }
 
     @IBAction func addButtonDidPressed(_ sender: Any) {
