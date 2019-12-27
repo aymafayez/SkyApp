@@ -29,4 +29,5 @@ enum ImagesEnum: String {
 }
 
 var backEndDateFormat = "yyyy-MM-dd HH:mm:ss"
-var appDateFormat = "dd-MM-yyyy HH:mm"
+var appDateTimeFormat = "dd-MM-yyyy HH:mm"
+var appDayformat = "EEEE"

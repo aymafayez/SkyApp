@@ -21,7 +21,7 @@ class DetailsViewModel: BaseViewModel {
             var forcastList = [ForecastModel]()
             if let list  = dto?.list {
                 for element in list {
-                    let date = self?.convert(date: element.dtTxt , from: backEndDateFormat , to: appDateFormat)
+                    let date = self?.convert(date: element.dtTxt , from: backEndDateFormat , to: appDateTimeFormat)
                     let forcastElement = ForecastModel(day: date ?? "" , temp: element.main.temp)
                     forcastList.append(forcastElement)
                 }
