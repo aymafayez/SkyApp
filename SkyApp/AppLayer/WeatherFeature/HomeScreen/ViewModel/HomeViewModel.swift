@@ -12,14 +12,14 @@ import CoreLocation
 class HomeViewModel: BaseViewModel {
     
    
-    func getCitiesList(lat: Double?, lon: Double?, onSuccess: @escaping ([CityModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
-        var cities = [CityModel]()
+    func getCitiesList(lat: Double?, lon: Double?, onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+        var cities = [CityWeatherModel]()
         getFirstElementOfForecastList(lat: lat, lon: lon, onSuccess: {  city in
            cities.append(city)
         }, onAPIError: onAPIError, onConnectionError:onConnectionError)
     }
     
-    private func getFirstElementOfForecastList(lat: Double?, lon: Double?, onSuccess: @escaping (CityModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+    private func getFirstElementOfForecastList(lat: Double?, lon: Double?, onSuccess: @escaping (CityWeatherModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
             if let _lat = lat, let _lon = lon {
                 getFirstElement(lat: _lat, lon: _lon, onSuccess: onSuccess, onAPIError: onAPIError, onConnectionError: onConnectionError)
@@ -31,12 +31,12 @@ class HomeViewModel: BaseViewModel {
     }
     
     // Call this function if user allows location access
-    private func getFirstElement(lat: Double, lon: Double, onSuccess: @escaping (CityModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+    private func getFirstElement(lat: Double, lon: Double, onSuccess: @escaping (CityWeatherModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
         let dto = CurrentWeatherAPIRequestDTO(lat: lat, lon: lon)
         let api = CurrentWeatherAPI(requestDTO: dto, onSuccess: { dto in
             if let _dto = dto {
-                let model = CityModel(name: _dto.name , description: _dto.weather[0].main, temp: _dto.main.temp )
+                let model = CityWeatherModel(name: _dto.name , description: _dto.weather[0].main, temp: _dto.main.temp )
                 onSuccess(model)
             }
 
@@ -51,12 +51,12 @@ class HomeViewModel: BaseViewModel {
     
     // call this function if user don't allow location access
     // it is recommended from the api doucemention to use country id
-    private func getFirstElement(id: Int, onSuccess: @escaping (CityModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> () ) {
+    private func getFirstElement(id: Int, onSuccess: @escaping (CityWeatherModel) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> () ) {
         
         let dto = CurrentWeatherAPIRequestDTO(id: id)
         let api = CurrentWeatherAPI(requestDTO: dto, onSuccess: { dto in
             if let _dto = dto {
-                let model = CityModel(name: _dto.name , description: _dto.weather[0].main, temp: _dto.main.temp )
+                let model = CityWeatherModel(name: _dto.name , description: _dto.weather[0].main, temp: _dto.main.temp )
                 onSuccess(model)
             }
             

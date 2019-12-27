@@ -75,7 +75,7 @@ class HomeViewController: BaseViewController {
     }
 
     @IBAction func addButtonDidPressed(_ sender: Any) {
-        let vm = ChooseCountryViewModel()
+        let vm = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
         let vc = ChooseCountryViewController(viewModel: vm, router: router)
         self.present(vc, animated: true, completion: nil)
     }

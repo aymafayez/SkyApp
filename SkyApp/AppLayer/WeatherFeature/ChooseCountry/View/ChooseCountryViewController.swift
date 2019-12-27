@@ -14,6 +14,11 @@ class ChooseCountryViewController: BaseViewController {
     let viewModel: ChooseCountryViewModel
     let router: WeatherRouter
     weak var delegate: ChooseCountryDelegate?
+    var citiesList: [CityElement]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,13 +30,13 @@ class ChooseCountryViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = ChooseCountryViewModel()
+        viewModel = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
         self.router = WeatherRouter()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
-        viewModel = ChooseCountryViewModel()
+         viewModel = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
         self.router = WeatherRouter()
         super.init(nibName: nibName, bundle: bundle)
     }
@@ -40,6 +45,9 @@ class ChooseCountryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupSearchBar()
+        getListOfCities()
+ 
         // Do any additional setup after loading the view.
     }
     
@@ -48,6 +56,20 @@ class ChooseCountryViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: SearchCountryTableViewCellEnum.nibName.rawValue, bundle: nil), forCellReuseIdentifier: SearchCountryTableViewCellEnum.CellReuseIdentifier.rawValue)
+    }
+    
+    private func setupSearchBar() {
+        searchBar.delegate = self
+    }
+    
+    private func getListOfCities() {
+        showLoadingView()
+        viewModel.getListOfCities(onSuccess: { [weak self] citiesList in
+            self?.citiesList = citiesList
+            self?.hideLoadingView()
+        }, onError: { [weak self] error in
+            self?.showErrorView(title: error, description: error)
+        })
     }
 
     @IBAction func doneButtonIsPressed(_ sender: Any) {
