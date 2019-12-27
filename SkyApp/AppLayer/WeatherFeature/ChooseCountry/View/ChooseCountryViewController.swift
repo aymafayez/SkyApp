@@ -19,6 +19,7 @@ class ChooseCountryViewController: BaseViewController {
             tableView.reloadData()
         }
     }
+    var selectedCity: CityElement?
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -73,7 +74,9 @@ class ChooseCountryViewController: BaseViewController {
     }
 
     @IBAction func doneButtonIsPressed(_ sender: Any) {
-        delegate?.didSelectCurrency(country: "")
+        if let _selectedCity = selectedCity {
+            delegate?.didSelectCity(city: _selectedCity)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ChooseCountryDelegate: AnyObject {
-    func didSelectCurrency(country: String?)
+    func didSelectCity(city: CityElement)
 }

@@ -26,7 +26,7 @@ extension ChooseCountryViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        selectedCity = citiesList?[indexPath.row]
     }
     
 }
