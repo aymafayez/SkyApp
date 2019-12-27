@@ -10,5 +10,9 @@ import Foundation
 
 class DetailsViewModel: BaseViewModel {
     
+    func getFiveDaysForecast(id: Int, onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+        
+    }
+    
 }
 

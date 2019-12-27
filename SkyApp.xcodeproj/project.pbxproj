@@ -67,6 +67,7 @@
 		9476F10823B698480072CE4C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476F10723B698480072CE4C /* Reachability.swift */; };
 		9476F10C23B6A5C40072CE4C /* HomeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476F10B23B6A5C40072CE4C /* HomeCellDelegate.swift */; };
 		9476F10E23B6A7060072CE4C /* HomeViewController + HomeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476F10D23B6A7060072CE4C /* HomeViewController + HomeCellDelegate.swift */; };
+		9476F11123B6AEA60072CE4C /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476F11023B6AEA60072CE4C /* ForecastModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		9476F10723B698480072CE4C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9476F10B23B6A5C40072CE4C /* HomeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellDelegate.swift; sourceTree = "<group>"; };
 		9476F10D23B6A7060072CE4C /* HomeViewController + HomeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + HomeCellDelegate.swift"; sourceTree = "<group>"; };
+		9476F11023B6AEA60072CE4C /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 			children = (
 				94235B8D23B56068002E87BA /* View */,
 				94235B9323B562B7002E87BA /* ViewModel */,
+				9476F10F23B6AE800072CE4C /* Model */,
 			);
 			path = DetailsScreen;
 			sourceTree = "<group>";
@@ -450,6 +453,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9476F10F23B6AE800072CE4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9476F11023B6AEA60072CE4C /* ForecastModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -586,6 +597,7 @@
 				94235B7923B533B6002E87BA /* ActivityIndicatorView.swift in Sources */,
 				94235B7623B53371002E87BA /* BaseViewModel.swift in Sources */,
 				9452655023B63569001415B1 /* CurrentWeatherAPIRequestDTO.swift in Sources */,
+				9476F11123B6AEA60072CE4C /* ForecastModel.swift in Sources */,
 				94235B3623B52100002E87BA /* AppDelegate.swift in Sources */,
 				9452653823B6253F001415B1 /* ParameterEncoder.swift in Sources */,
 				94235B9723B56397002E87BA /* DetailsViewController + TableViewProtocols.swift in Sources */,
