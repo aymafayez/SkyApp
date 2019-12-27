@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+extension HomeViewController: ChooseCityDelegate {
+    
+    func didSelectCity(city: CityElement) {
+        showLoadingView()
+        viewModel.addCity(id: city.id, onSuccess: { [weak self] cities in
+            self?.citiesList = cities
+            self?.tableView.reloadData()
+            self?.hideLoadingView()
+        }, onAPIError: { [weak self] error in
+            self?.hideLoadingView()
+            self?.showErrorView(title: "error", description: error)
+        }) { [weak self] error in
+            self?.hideLoadingView()
+            self?.showErrorView(title: "error", description: error)
+        }
+    }
+    
+}

@@ -9,11 +9,13 @@
 import Foundation
 
 class CityWeatherModel {
+    var id: Int
     var name: String
     var description: String
     var temp: Double
     
-    init(name: String, description: String, temp: Double) {
+    init(id: Int ,name: String, description: String, temp: Double) {
+        self.id = id
         self.name = name
         self.description = description
         self.temp = temp

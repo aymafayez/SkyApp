@@ -13,7 +13,7 @@ class ChooseCountryViewController: BaseViewController {
     // MARK: - Properties
     let viewModel: ChooseCountryViewModel
     let router: WeatherRouter
-    weak var delegate: ChooseCountryDelegate?
+    weak var delegate: ChooseCityDelegate?
     var citiesList: [CityElement]? {
         didSet {
             tableView.reloadData()
@@ -48,7 +48,6 @@ class ChooseCountryViewController: BaseViewController {
         setupTableView()
         setupSearchBar()
         getListOfCities()
- 
         // Do any additional setup after loading the view.
     }
     

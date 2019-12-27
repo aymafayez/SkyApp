@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+extension HomeViewController: HomeCellDelegate {
+    func removeProduct(at indexPath: IndexPath) {
+        viewModel.removeCity(id: citiesList[indexPath.row].id, onFinish: { [weak self] cities in
+            self?.citiesList = cities
+            self?.tableView.reloadData()
+        })
+    }
+}

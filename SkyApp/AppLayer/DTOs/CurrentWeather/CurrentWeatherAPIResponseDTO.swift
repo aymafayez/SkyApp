@@ -13,6 +13,7 @@ struct CurrentWeatherAPIResponseDTO: Codable {
     let weather: [Weather]
     let main: Main
     let name: String
+    let id: Int
   
 }
 

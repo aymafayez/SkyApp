@@ -54,6 +54,9 @@
                                     <constraint firstAttribute="height" constant="50" id="fyX-8g-JFw"/>
                                 </constraints>
                                 <state key="normal" image="deleteIcon"/>
+                                <connections>
+                                    <action selector="weatherButtonDidPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8vG-W9-9hl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,6 +86,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="citiyNameLabel" destination="Qkx-HO-hJp" id="1oQ-Mo-sq3"/>
+                <outlet property="weatherDecriptionLabel" destination="ATk-hP-yVI" id="X9o-Qx-6he"/>
+                <outlet property="weatherDegreeLabel" destination="Nus-7z-UMy" id="T3H-Eb-w1I"/>
+            </connections>
             <point key="canvasLocation" x="244.92753623188409" y="179.12946428571428"/>
         </tableViewCell>
     </objects>

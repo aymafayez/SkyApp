@@ -16,12 +16,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return citiesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellEnum.CellReuseIdentifier.rawValue) as? HomeTableViewCell
+        cell?.citiyNameLabel.text = citiesList[indexPath.row].name
+        cell?.weatherDecriptionLabel.text = citiesList[indexPath.row].description
+        cell?.weatherDegreeLabel.text = String(citiesList[indexPath.row].temp)
         cell?.selectionStyle = .none
+        cell?.delegate = self
         return  cell ?? UITableViewCell()
     }
     

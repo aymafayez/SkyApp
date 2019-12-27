@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
     let router: WeatherRouter
     var locationManager: CLLocationManager?
     var lat, lon: Double?
+    var citiesList: [CityWeatherModel] = [CityWeatherModel]()
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Initializers
@@ -65,18 +66,24 @@ class HomeViewController: BaseViewController {
     }
     
     func getWeatherList() {
-        viewModel.getCitiesList(lat: lat, lon: lon, onSuccess: { _ in
-            
-        }, onAPIError: { _ in
-            
-        }) { _ in
-            
+        self.showLoadingView()
+        viewModel.getCitiesList(lat: lat, lon: lon, onSuccess: { [weak self] citiesList in
+            self?.citiesList.append(contentsOf: citiesList)
+            self?.tableView.reloadData()
+            self?.hideLoadingView()
+        }, onAPIError: { [weak self] error in
+            self?.hideLoadingView()
+            self?.showErrorView(title: "Error", description: error)
+        }) { [weak self] error in
+            self?.hideLoadingView()
+            self?.showErrorView(title: "Error", description: error)
         }
     }
 
     @IBAction func addButtonDidPressed(_ sender: Any) {
         let vm = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
         let vc = ChooseCountryViewController(viewModel: vm, router: router)
+        vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
     
