@@ -65,7 +65,7 @@ class HomeViewController: BaseViewController {
     }
     
     func getWeatherList() {
-        viewModel.getForecastList(lat: lat, lon: lon, onSuccess: { _ in
+        viewModel.getCitiesList(lat: lat, lon: lon, onSuccess: { _ in
             
         }, onAPIError: { _ in
             

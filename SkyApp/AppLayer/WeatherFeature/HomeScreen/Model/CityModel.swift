@@ -8,13 +8,13 @@
 
 import Foundation
 
-class CurrentWeatherModel {
-    var cityName: String
+class CityModel {
+    var name: String
     var description: String
     var temp: Double
     
-    init(cityName: String, description: String, temp: Double) {
-        self.cityName = cityName
+    init(name: String, description: String, temp: Double) {
+        self.name = name
         self.description = description
         self.temp = temp
     }
