@@ -48,11 +48,8 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         setupTableView()
         setupLocation()
+        setupNaviagtionBar()
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true 
     }
     
     private func setupTableView() {
@@ -67,6 +64,12 @@ class HomeViewController: BaseViewController {
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.requestLocation()                   
+    }
+    
+    private func setupNaviagtionBar() {
+        let img = UIImage(named: ImagesEnum.DetailsBarImage.rawValue)
+        navigationController?.navigationBar.setBackgroundImage(img, for: .default)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     // user can optionaly send his lat and lon to get his city's current weather as an element of the returned list

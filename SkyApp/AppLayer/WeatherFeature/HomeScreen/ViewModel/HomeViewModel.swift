@@ -69,13 +69,20 @@ class HomeViewModel: BaseViewModel {
     // add a city to cities list and return the all list
     func addCity(id: Int, onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
-        getCityWeather(cityID: id, onSuccess: { [weak self] city in
-            guard let strongSelf = self else { return }
-            self?.storageProvider.saveCityCurrentWeather(city: city)
-            self?.citiesList.append(city)
-            onSuccess(strongSelf.citiesList)
-        }, onAPIError: onAPIError, onConnectionError: onConnectionError)
-        
+        if citiesList.count == 5 {
+            onAPIError("Can't add more than five cities")
+        }
+        else if isCityIdExist(id: id, citiesList: citiesList) {
+            onAPIError("City is already exist")
+        }
+        else {
+            getCityWeather(cityID: id, onSuccess: { [weak self] city in
+                guard let strongSelf = self else { return }
+                self?.storageProvider.saveCityCurrentWeather(city: city)
+                self?.citiesList.append(city)
+                onSuccess(strongSelf.citiesList)
+                }, onAPIError: onAPIError, onConnectionError: onConnectionError)
+        }
     }
     
     // remmove a city from cities list and return the list
@@ -189,6 +196,15 @@ class HomeViewModel: BaseViewModel {
         self.storageProvider.saveCitiesCurrentWeather(cities: self.citiesList)
         onFinish(citiesList)
         
+    }
+    
+    private func isCityIdExist(id: Int, citiesList: [CityWeatherModel]) -> Bool {
+        for city in citiesList {
+            if id == city.id {
+                return true
+            }
+        }
+        return false
     }
         
 }
