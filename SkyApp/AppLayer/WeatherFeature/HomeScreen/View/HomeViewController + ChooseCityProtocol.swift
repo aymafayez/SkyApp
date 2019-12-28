@@ -9,7 +9,7 @@
 import Foundation
 
 extension HomeViewController: ChooseCityDelegate {
-    
+    // get the id from select city controller and then call the api to get current weather and then save it
     func didSelectCity(city: CityElement) {
         showLoadingView()
         viewModel.addCity(id: city.id, onSuccess: { [weak self] cities in

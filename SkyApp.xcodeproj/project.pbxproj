@@ -187,6 +187,11 @@
 		94235B3423B52100002E87BA /* SkyApp */ = {
 			isa = PBXGroup;
 			children = (
+				94235B7223B5334C002E87BA /* Base */,
+				94235B7723B53398002E87BA /* Utilites */,
+				9452652023B6231D001415B1 /* DTOs */,
+				9452652523B623C4001415B1 /* APIManager */,
+				9452653523B624EC001415B1 /* NetworkLayer */,
 				94235B5823B5228C002E87BA /* AppLayer */,
 				94235B3523B52100002E87BA /* AppDelegate.swift */,
 				94235B3723B52100002E87BA /* ViewController.swift */,
@@ -211,11 +216,6 @@
 		94235B5823B5228C002E87BA /* AppLayer */ = {
 			isa = PBXGroup;
 			children = (
-				9452653523B624EC001415B1 /* NetworkLayer */,
-				9452652523B623C4001415B1 /* APIManager */,
-				9452652023B6231D001415B1 /* DTOs */,
-				94235B7723B53398002E87BA /* Utilites */,
-				94235B7223B5334C002E87BA /* Base */,
 				94235B6D23B532B0002E87BA /* WeatherFeature */,
 			);
 			path = AppLayer;

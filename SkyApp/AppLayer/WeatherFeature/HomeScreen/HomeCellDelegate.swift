@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeCellDelegate: AnyObject {
-    func removeProduct(at indexPath: IndexPath) 
+    func removeCity(at indexPath: IndexPath) 
 }

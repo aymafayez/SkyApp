@@ -13,13 +13,14 @@ import CoreLocation
 class HomeViewController: BaseViewController {
     
     
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Properties
     let viewModel: HomeViewModel
     let router: WeatherRouter
     var locationManager: CLLocationManager?
-    var lat, lon: Double?
     var citiesList: [CityWeatherModel] = [CityWeatherModel]()
-    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Initializers
     init(viewModel: HomeViewModel, router: WeatherRouter) {
@@ -62,39 +63,31 @@ class HomeViewController: BaseViewController {
     private func setupLocation() {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
-        locationManager?.requestLocation()
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.requestLocation()                   
     }
     
-    func getWeatherList() {
+    // user can optionaly send his lat and lon to get his city's current weather as an element of the returned list
+    func getWeatherList(lat: Double?, lon: Double?) {
         self.showLoadingView()
-        viewModel.getCitiesList(lat: lat, lon: lon, onSuccess: { [weak self] citiesList in
+        viewModel.getCitiesList(currentlat: lat, currentLon: lon, onSuccess: { [weak self] citiesList in
             self?.citiesList.append(contentsOf: citiesList)
             self?.tableView.reloadData()
             self?.hideLoadingView()
         }, onAPIError: { [weak self] error in
             self?.hideLoadingView()
-            self?.showErrorView(title: "Error", description: error)
+            self?.showErrorView(title: "API Error", description: error)
         }) { [weak self] error in
             self?.hideLoadingView()
-            self?.showErrorView(title: "Error", description: error)
+            self?.showErrorView(title: "Connection Error", description: error)
         }
     }
 
     @IBAction func addButtonDidPressed(_ sender: Any) {
-        let vm = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
+        let vm = ChooseCountryViewModel(fileName: CitiesListFileEnum.name.rawValue, fileType: CitiesListFileEnum.type.rawValue)
         let vc = ChooseCountryViewController(viewModel: vm, router: router)
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

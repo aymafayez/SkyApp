@@ -10,11 +10,15 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
     @IBOutlet weak var citiyNameLabel: UILabel!
     @IBOutlet weak var weatherDecriptionLabel: UILabel!
     @IBOutlet weak var weatherDegreeLabel: UILabel!
+    
+    // MARK: - Properties
     weak var delegate: HomeCellDelegate?
     
+    // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +31,7 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     @IBAction func weatherButtonDidPressed(_ sender: Any) {
-        delegate?.removeProduct(at: indexPath!)
+        delegate?.removeCity(at: indexPath!)
     }
 }
 

@@ -28,6 +28,13 @@ enum ImagesEnum: String {
     case DetailsBarImage = "DetialsBarImage"
 }
 
+enum CitiesListFileEnum: String {
+    case name = "cityList"
+    case type = "json"
+}
+
+var LondonUKID = 2643743
+
 var backEndDateFormat = "yyyy-MM-dd HH:mm:ss"
 var appDateTimeFormat = "dd-MM-yyyy HH:mm"
 var appDayformat = "EEEE"
