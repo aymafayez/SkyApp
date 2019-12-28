@@ -10,11 +10,15 @@ import Foundation
 
 class DetailsViewModel: BaseViewModel {
     
+    // MARK: - Properties
     private var id: Int
+    
+    // MARK: - Initializers
     init(id: Int) {
         self.id = id
     }
     
+    // MARK: - Methods
     func getFiveDaysForecast(onSuccess: @escaping ([ForecastModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         let dto = FiveDaysWeatherAPIRequestDTO(id: id)
         let api = FiveDaysForecastAPI(requestDTO: dto, onSuccess: { [weak self] dto in

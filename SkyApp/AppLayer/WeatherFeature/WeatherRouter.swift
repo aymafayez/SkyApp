@@ -12,7 +12,8 @@ import UIKit
 class WeatherRouter: WeatherRouterProtocol {
     
     func start(navigationController: UINavigationController) {
-        let vm = HomeViewModel()
+        let storageProvider = CoreDataStorageProvider()
+        let vm = HomeViewModel(storageProvider: storageProvider)
         let vc = HomeViewController(viewModel: vm, router: self)
         navigationController.pushViewController(vc, animated: true)
     }

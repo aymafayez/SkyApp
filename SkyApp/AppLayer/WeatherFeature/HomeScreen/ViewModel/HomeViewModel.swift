@@ -12,27 +12,83 @@ import CoreLocation
 class HomeViewModel: BaseViewModel {
     
     // MARK: - Properties
-    var cities = [CityWeatherModel]()
+    var citiesList = [CityWeatherModel]()
+    var storageProvider: StorageProviderInterface
+    var restOfCitiesBarierQueue: DispatchQueue
+    
+    
+    init(storageProvider: StorageProviderInterface) {
+        self.storageProvider = storageProvider
+        restOfCitiesBarierQueue = DispatchQueue(
+            label: "",
+            attributes: .concurrent)
+        super.init()
+    }
 
    // MARK: - Methods
     // user can optionaly send his lat and lon to get his city's current weather as an element of the returned list
     func getCitiesList(currentlat: Double?, currentLon: Double?, onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
-        getFirsCity(lat: currentlat, lon: currentLon, onSuccess: { [weak self] city in
-            guard let strongSelf = self else { return }
-            self?.cities.append(city)
-            onSuccess(strongSelf.cities)
-        }, onAPIError: onAPIError, onConnectionError:onConnectionError)
+        
+        var firstCity: CityWeatherModel = CityWeatherModel() // empty object
+        var restOfCities = [CityWeatherModel]()
+        
+        if isConnectedToInternet() {
+            
+            // dispatch group used to make sure that success closure will be called after the first element and the rest of elements are fetched
+            // Note: get first city and get the rest of cities are called at the same time because they are independant and that is a trick that saves time.
+            let allCitiesDispatchGroup = DispatchGroup()
+            
+            // Get first element of the list
+            allCitiesDispatchGroup.enter()
+            getFirsCity(lat: currentlat, lon: currentLon, onSuccess: { city in
+                    firstCity = city
+                    allCitiesDispatchGroup.leave()
+                }, onAPIError: onAPIError, onConnectionError:onConnectionError)
+            
+            
+            
+            // Get the rest of elements
+            allCitiesDispatchGroup.enter()
+            getRestOfCities(onSuccess: { cities in
+                    restOfCities.append(contentsOf: cities)
+                    allCitiesDispatchGroup.leave()
+            }, onAPIError: onAPIError, onConnectionError: onConnectionError)
+            
+            
+            // notifiy main thread that cities' list is ready
+            allCitiesDispatchGroup.notify(queue: .main) { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.citiesList.append(firstCity)
+                self.citiesList.append(contentsOf: restOfCities)
+                self.storageProvider.removeAllCitiesAndForecast()
+                for city in self.citiesList {
+                    self.storageProvider.saveCityCurrentWeather(city: city)
+                }
+                onSuccess(self.citiesList)
+            }
+            
+            
+        }
+        
+        else {
+            citiesList = storageProvider.fetchCitiesCurrentWeather()
+            onSuccess(citiesList)
+        }
+
         
     }
     
-    // add a city to cities list and return the list
+    // add a city to cities list and return the all list
     func addCity(id: Int, onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
         getCityWeather(cityID: id, onSuccess: { [weak self] city in
             guard let strongSelf = self else { return }
-            self?.cities.append(city)
-            onSuccess(strongSelf.cities)
+            self?.storageProvider.saveCityCurrentWeather(city: city)
+            self?.citiesList.append(city)
+            onSuccess(strongSelf.citiesList)
         }, onAPIError: onAPIError, onConnectionError: onConnectionError)
         
     }
@@ -40,13 +96,14 @@ class HomeViewModel: BaseViewModel {
     // remmove a city from cities list and return the list
     func removeCity(id: Int, onFinish: @escaping ([CityWeatherModel]) -> ()) {
         
-        cities = cities.filter { city -> Bool in
+        citiesList = citiesList.filter { [weak self] city -> Bool in
             if city.id == id {
+                self?.storageProvider.removeCityAndForecast(cityID: city.id)
                 return false
             }
             return true
         }
-        onFinish(cities)
+        onFinish(citiesList)
         
     }
     
@@ -63,13 +120,30 @@ class HomeViewModel: BaseViewModel {
 
     }
     
-    private func getRestOfCities(onSuccess: @escaping ([CityWeatherModel]) -> (), onError: @escaping (String) -> ()) {
-        if Network.reachability.isReachableViaWiFi || Network.reachability.isReachableOnWWAN {
-            
+    // get stored cities and update it with the live data
+    private func getRestOfCities(onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+        
+        let storedCities = storageProvider.fetchCitiesCurrentWeather()
+        var updatedCities = [CityWeatherModel]()
+        let dispatchGroup = DispatchGroup()
+        for city in storedCities {
+            dispatchGroup.enter()
+            getCityWeather(cityID: city.id , onSuccess: { [weak self] dto in
+                
+                // this is a critical section which needs the barrier to make sure that only one thread append at the updatedCities list
+                self?.restOfCitiesBarierQueue.async(flags: .barrier) {
+                    updatedCities.append(dto)
+                    dispatchGroup.leave()
+                }
+                
+            }, onAPIError: onAPIError, onConnectionError: onConnectionError)
         }
-        else {
-            
+        
+        // notify the main thread that rest of cities' list are ready
+        dispatchGroup.notify(queue: .main) {
+            onSuccess(updatedCities)
         }
+
     }
     
     // get city's current weather by city's location
@@ -112,6 +186,15 @@ class HomeViewModel: BaseViewModel {
         api.paramEncoder = URLParameterEncoder(destination: .queryString)
         api.execute()
         
+    }
+    
+    private func isConnectedToInternet() -> Bool {
+        if Network.reachability.isReachableViaWiFi || Network.reachability.isReachableOnWWAN {
+            return true
+        }
+        else {
+            return false
+        }
     }
         
 }

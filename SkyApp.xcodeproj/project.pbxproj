@@ -39,6 +39,8 @@
 		94235BA623B569E1002E87BA /* ChooseCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */; };
 		94235BA823B56AB0002E87BA /* SelectCityViewController + TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA723B56AB0002E87BA /* SelectCityViewController + TableViewProtocols.swift */; };
 		94235BAA23B56DB7002E87BA /* SelectCityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA923B56DB7002E87BA /* SelectCityDelegate.swift */; };
+		94455C6423B7805400EE0904 /* StorageProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94455C6323B7805400EE0904 /* StorageProviderInterface.swift */; };
+		94455C6623B7806600EE0904 /* CoreDataStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94455C6523B7806600EE0904 /* CoreDataStorageProvider.swift */; };
 		9452652723B62404001415B1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652623B62404001415B1 /* APIError.swift */; };
 		9452652923B6241A001415B1 /* RequestExecuterCreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652823B6241A001415B1 /* RequestExecuterCreatorFactory.swift */; };
 		9452652B23B62431001415B1 /* BaseAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652A23B62431001415B1 /* BaseAPIProtocol.swift */; };
@@ -117,6 +119,8 @@
 		94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewModel.swift; sourceTree = "<group>"; };
 		94235BA723B56AB0002E87BA /* SelectCityViewController + TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectCityViewController + TableViewProtocols.swift"; sourceTree = "<group>"; };
 		94235BA923B56DB7002E87BA /* SelectCityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityDelegate.swift; sourceTree = "<group>"; };
+		94455C6323B7805400EE0904 /* StorageProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProviderInterface.swift; sourceTree = "<group>"; };
+		94455C6523B7806600EE0904 /* CoreDataStorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorageProvider.swift; sourceTree = "<group>"; };
 		9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPIResponseDTO.swift; sourceTree = "<group>"; };
 		9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPIRequestDTO.swift; sourceTree = "<group>"; };
 		9452652623B62404001415B1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		94235B3423B52100002E87BA /* SkyApp */ = {
 			isa = PBXGroup;
 			children = (
+				94455C6223B7802C00EE0904 /* StorageProvider */,
 				94235B7223B5334C002E87BA /* Base */,
 				94235B7723B53398002E87BA /* Utilites */,
 				9452652023B6231D001415B1 /* DTOs */,
@@ -346,6 +351,15 @@
 				94235BA523B569E1002E87BA /* ChooseCountryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94455C6223B7802C00EE0904 /* StorageProvider */ = {
+			isa = PBXGroup;
+			children = (
+				94455C6323B7805400EE0904 /* StorageProviderInterface.swift */,
+				94455C6523B7806600EE0904 /* CoreDataStorageProvider.swift */,
+			);
+			path = StorageProvider;
 			sourceTree = "<group>";
 		};
 		9452652023B6231D001415B1 /* DTOs */ = {
@@ -579,6 +593,7 @@
 				9452655C23B65105001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */,
 				94235B8323B5359C002E87BA /* HomeViewModel.swift in Sources */,
 				94235B8023B534B4002E87BA /* WeatherRouter.swift in Sources */,
+				94455C6423B7805400EE0904 /* StorageProviderInterface.swift in Sources */,
 				94235B9523B562D3002E87BA /* DetialsViewModel.swift in Sources */,
 				9452654123B625CB001415B1 /* URLRequestExecuter.swift in Sources */,
 				94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */,
@@ -619,6 +634,7 @@
 				94235B7423B5335E002E87BA /* BaseViewController.swift in Sources */,
 				9452653123B6248A001415B1 /* APIManagerConfiguration.swift in Sources */,
 				9452654D23B63539001415B1 /* CurrentWeatherAPI.swift in Sources */,
+				94455C6623B7806600EE0904 /* CoreDataStorageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

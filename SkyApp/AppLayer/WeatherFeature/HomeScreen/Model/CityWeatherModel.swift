@@ -23,4 +23,12 @@ class CityWeatherModel {
         self.description = description
         self.temp = temp
     }
+    
+    init() {
+        // empty object
+        self.id = -1
+        self.name = ""
+        self.description = ""
+        self.temp = -1
+    }
 }
