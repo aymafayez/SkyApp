@@ -51,7 +51,7 @@ public class BaseAPI<RequestModel: Encodable, ResponseModel: Decodable>: BaseAPI
                         let dto = try decoder.decode(ResponseModel.self, from: responseData)
                         self?.processResponse(response: dto)
                     } catch {
-                        print(error.localizedDescription)
+                        self?.onAPIError?(APIError.decodingError)
                     }
                 case 500:
                     self?.handleAPIError(error: APIError.interalServerError)
@@ -64,7 +64,7 @@ public class BaseAPI<RequestModel: Encodable, ResponseModel: Decodable>: BaseAPI
             })
             requestExecuter.execute()
         } catch {
-            print("Failed to encode request")
+            onAPIError?(APIError.encodingError)
         }
     }
     

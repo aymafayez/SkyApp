@@ -41,54 +41,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
-            timestampString = "599261613.2957259"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
-            timestampString = "599261613.295808"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
-            timestampString = "599261613.295866"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController + ChooseCityProtocol.swift"
             timestampString = "599261168.802398"
             startingColumnNumber = "9223372036854775807"
@@ -153,14 +105,270 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "SkyApp/APIManager/BaseAPI/BaseAPI.swift"
+            timestampString = "599268316.3923841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "execute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+            timestampString = "599268704.560295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getCitiesList(currentlat:currentLon:onSuccess:onAPIError:onConnectionError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+            timestampString = "599268704.56062"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getCitiesList(currentlat:currentLon:onSuccess:onAPIError:onConnectionError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController + LocationProtocols.swift"
+            timestampString = "599268772.411238"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController + LocationProtocols.swift"
+            timestampString = "599268772.411638"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController + LocationProtocols.swift"
+            timestampString = "599268772.411899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+            timestampString = "599268820.684664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+            timestampString = "599268821.25394"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+            timestampString = "599268823.043054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+            timestampString = "599268824.141592"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "addCity(id:onSuccess:onAPIError:onConnectionError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkyApp.HomeViewModel.addCity(id: Swift.Int, onSuccess: (Swift.Array&lt;SkyApp.CityWeatherModel&gt;) -&gt; (), onAPIError: (Swift.String) -&gt; (), onConnectionError: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "SkyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guest2/Documents/Parent%20APS/SkyApp/SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+                  timestampString = "599268916.9187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "874">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SkyApp.CityWeatherModel) -&gt; () in SkyApp.HomeViewModel.addCity(id: Swift.Int, onSuccess: (Swift.Array&lt;SkyApp.CityWeatherModel&gt;) -&gt; (), onAPIError: (Swift.String) -&gt; (), onConnectionError: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "SkyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guest2/Documents/Parent%20APS/SkyApp/SkyApp/AppLayer/WeatherFeature/HomeScreen/ViewModel/HomeViewModel.swift"
+                  timestampString = "599268916.9219429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "214">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController + LocationProtocols.swift"
+            timestampString = "599268861.379373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController + LocationProtocols.swift"
+            timestampString = "599268862.526659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController.swift"
-            timestampString = "599261613.295979"
+            timestampString = "599268916.4865381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "getWeatherList(lat:lon:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkyApp.HomeViewController.getWeatherList(lat: Swift.Optional&lt;Swift.Double&gt;, lon: Swift.Optional&lt;Swift.Double&gt;) -&gt; ()"
+                  moduleName = "SkyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guest2/Documents/Parent%20APS/SkyApp/SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController.swift"
+                  timestampString = "599268916.945073"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "133">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SkyApp.CityWeatherModel&gt;) -&gt; () in SkyApp.HomeViewController.getWeatherList(lat: Swift.Optional&lt;Swift.Double&gt;, lon: Swift.Optional&lt;Swift.Double&gt;) -&gt; ()"
+                  moduleName = "SkyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guest2/Documents/Parent%20APS/SkyApp/SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController.swift"
+                  timestampString = "599268916.948812"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "123">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController.swift"
-            timestampString = "599261613.296383"
+            timestampString = "599268916.486984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "getWeatherList(lat:lon:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,27 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController.swift"
-            timestampString = "599261613.29667"
+            timestampString = "599268916.4872921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "getWeatherList(lat:lon:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SkyApp/AppLayer/WeatherFeature/HomeScreen/View/HomeViewController.swift"
-            timestampString = "599261613.29695"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "getWeatherList(lat:lon:)"
             landmarkType = "7">
          </BreakpointContent>

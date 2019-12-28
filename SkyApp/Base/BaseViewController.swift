@@ -61,14 +61,20 @@ class BaseViewController: UIViewController {
     }
     
     public func hideLoadingView() {
-        loadingView?.removeFromSuperview()
-        loadingView = nil
+        DispatchQueue.main.async { [weak self] in
+           self?.loadingView?.removeFromSuperview()
+           self?.loadingView = nil
+        }
     }
     
     public func showErrorView(title: String, description: String) {
-        let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alert, animated: true)
+        
+        DispatchQueue.main.async{
+            let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+
     }
     
     

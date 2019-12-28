@@ -10,4 +10,6 @@ import Foundation
 
 enum APIError: String, Error {
     case interalServerError = "Internal Server Error "
+    case decodingError = "The data couldn’t be read because it isn’t in the correct format."
+    case encodingError = "Failed to encode"
 }
