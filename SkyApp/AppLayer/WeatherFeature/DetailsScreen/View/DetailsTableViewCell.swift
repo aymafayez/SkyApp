@@ -9,9 +9,12 @@
 import UIKit
 
 class DetailsTableViewCell: UITableViewCell {
-
+    
+    // MARK: - Outlets
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
+    
+    // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

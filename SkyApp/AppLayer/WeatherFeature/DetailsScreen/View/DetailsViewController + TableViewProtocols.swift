@@ -20,10 +20,12 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: DetailsTableViewCellEnum.CellReuseIdentifier.rawValue) as? DetailsTableViewCell
         cell?.dayLabel.text = forecastList[indexPath.row].day
         cell?.tempLabel.text = String(forecastList[indexPath.row].temp)
         return  cell ?? UITableViewCell()
+        
     }
     
 }
