@@ -8,20 +8,19 @@
 
 import UIKit
 
-class ChooseCountryViewController: BaseViewController {
+class SelectCityViewController: BaseViewController {
 
+     // MARK: - Outlets
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Properties
     let viewModel: ChooseCountryViewModel
     let router: WeatherRouter
-    weak var delegate: ChooseCityDelegate?
-    var citiesList: [CityElement]? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    weak var delegate: SelectCityDelegate?
+    var citiesList = [CityElement]()
     var selectedCity: CityElement?
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+
     
     // MARK: - Initializers
     init(viewModel: ChooseCountryViewModel, router: WeatherRouter) {
@@ -31,13 +30,13 @@ class ChooseCountryViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
+        viewModel = ChooseCountryViewModel(fileName: CitiesListFileEnum.name.rawValue, fileType: CitiesListFileEnum.type.rawValue)
         self.router = WeatherRouter()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
-         viewModel = ChooseCountryViewModel(fileName: "cityList", fileType: "json")
+         viewModel = ChooseCountryViewModel(fileName: CitiesListFileEnum.name.rawValue, fileType: CitiesListFileEnum.type.rawValue)
         self.router = WeatherRouter()
         super.init(nibName: nibName, bundle: bundle)
     }
@@ -48,9 +47,7 @@ class ChooseCountryViewController: BaseViewController {
         setupTableView()
         setupSearchBar()
         getListOfCities()
-        // Do any additional setup after loading the view.
     }
-    
     
     private func setupTableView() {
         tableView.delegate = self
@@ -66,8 +63,10 @@ class ChooseCountryViewController: BaseViewController {
         showLoadingView()
         viewModel.getListOfCities(onSuccess: { [weak self] citiesList in
             self?.citiesList = citiesList
+            self?.tableView.reloadData()
             self?.hideLoadingView()
         }, onError: { [weak self] error in
+            self?.hideLoadingView()
             self?.showErrorView(title: error, description: error)
         })
     }
@@ -82,14 +81,6 @@ class ChooseCountryViewController: BaseViewController {
     @IBAction func cancelButtonIsPressed(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

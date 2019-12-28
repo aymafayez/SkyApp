@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-extension ChooseCountryViewController: UISearchBarDelegate {
+extension SelectCityViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        citiesList = viewModel.getListOfCities(searchString: searchText, citiesList: citiesList!)
+        citiesList = viewModel.searchForCities(searchString: searchText)
+        tableView.reloadData()
     }
 }

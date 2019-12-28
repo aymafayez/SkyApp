@@ -19,8 +19,8 @@ enum DetailsTableViewCellEnum: String {
 }
 
 enum SearchCountryTableViewCellEnum: String {
-    case nibName = "CountryTableViewCell"
-    case CellReuseIdentifier = "CountryTableViewCellID"
+    case nibName = "SelectCityTableViewCell"
+    case CellReuseIdentifier = "SelectCityTableViewCellID"
 }
 
 enum ImagesEnum: String {

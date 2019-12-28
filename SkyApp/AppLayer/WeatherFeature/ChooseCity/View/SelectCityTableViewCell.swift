@@ -8,9 +8,12 @@
 
 import UIKit
 
-class CountryTableViewCell: UITableViewCell {
+class SelectCityTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
     @IBOutlet weak var nameLabel: UILabel!
+    
+    // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

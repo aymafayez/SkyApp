@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ChooseCityDelegate: AnyObject {
+protocol SelectCityDelegate: AnyObject {
     func didSelectCity(city: CityElement)
 }

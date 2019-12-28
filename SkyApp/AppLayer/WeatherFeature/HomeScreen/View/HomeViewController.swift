@@ -85,7 +85,7 @@ class HomeViewController: BaseViewController {
 
     @IBAction func addButtonDidPressed(_ sender: Any) {
         let vm = ChooseCountryViewModel(fileName: CitiesListFileEnum.name.rawValue, fileType: CitiesListFileEnum.type.rawValue)
-        let vc = ChooseCountryViewController(viewModel: vm, router: router)
+        let vc = SelectCityViewController(viewModel: vm, router: router)
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
