@@ -88,6 +88,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="citiyNameLabel" destination="Qkx-HO-hJp" id="1oQ-Mo-sq3"/>
+                <outlet property="deleteButton" destination="FJl-w0-kdx" id="2EW-ni-sfM"/>
                 <outlet property="weatherDecriptionLabel" destination="ATk-hP-yVI" id="X9o-Qx-6he"/>
                 <outlet property="weatherDegreeLabel" destination="Nus-7z-UMy" id="T3H-Eb-w1I"/>
             </connections>

@@ -14,6 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var citiyNameLabel: UILabel!
     @IBOutlet weak var weatherDecriptionLabel: UILabel!
     @IBOutlet weak var weatherDegreeLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     
     // MARK: - Properties
     weak var delegate: HomeCellDelegate?

@@ -24,6 +24,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.citiyNameLabel.text = citiesList[indexPath.row].name
         cell?.weatherDecriptionLabel.text = citiesList[indexPath.row].description
         cell?.weatherDegreeLabel.text = String(citiesList[indexPath.row].temp)
+        cell?.deleteButton.isHidden = indexPath.row == 0 ? true : false
         cell?.selectionStyle = .none
         cell?.delegate = self
         return  cell ?? UITableViewCell()

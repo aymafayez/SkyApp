@@ -63,7 +63,6 @@ class HomeViewController: BaseViewController {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
-        locationManager?.requestLocation()                   
     }
     
     private func setupNaviagtionBar() {
@@ -76,7 +75,7 @@ class HomeViewController: BaseViewController {
     func getWeatherList(lat: Double?, lon: Double?) {
         self.showLoadingView()
         viewModel.getCitiesList(currentlat: lat, currentLon: lon, onSuccess: { [weak self] citiesList in
-            self?.citiesList.append(contentsOf: citiesList)
+            self?.citiesList = citiesList
             self?.tableView.reloadData()
             self?.hideLoadingView()
         }, onAPIError: { [weak self] error in

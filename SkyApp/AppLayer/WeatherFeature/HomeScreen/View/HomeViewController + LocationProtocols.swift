@@ -12,15 +12,7 @@ import CoreLocation
 extension HomeViewController:  CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        if status == .authorizedAlways {
-            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                if CLLocationManager.isRangingAvailable() {
-                    // do stuff
-                }
-            }
-        }
-        
+        locationManager?.requestLocation()
     }
     
 
@@ -35,9 +27,9 @@ extension HomeViewController:  CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
-        locationManager?.stopUpdatingLocation()
-        getWeatherList(lat: nil, lon: nil)
-        
+        if CLLocationManager.authorizationStatus() == .denied  {
+            locationManager?.stopUpdatingLocation()
+            getWeatherList(lat: nil, lon: nil)
+        }
     }
 }
