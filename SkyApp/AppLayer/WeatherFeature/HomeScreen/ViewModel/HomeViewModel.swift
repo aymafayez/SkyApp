@@ -12,14 +12,15 @@ import CoreLocation
 class HomeViewModel: BaseViewModel {
     
     // MARK: - Properties
-    var citiesList = [CityWeatherModel]()
-    var storageProvider: StorageProviderInterface
-    var restOfCitiesBarierQueue: DispatchQueue
+    private var citiesList = [CityWeatherModel]()
+    private var storageProvider: StorageProviderInterface
+    private var savedCitiesBarierQueue: DispatchQueue
     
     
+    // MARK: - Initializers
     init(storageProvider: StorageProviderInterface) {
         self.storageProvider = storageProvider
-        restOfCitiesBarierQueue = DispatchQueue(
+        savedCitiesBarierQueue = DispatchQueue(
             label: "",
             attributes: .concurrent)
         super.init()
@@ -29,14 +30,11 @@ class HomeViewModel: BaseViewModel {
     // user can optionaly send his lat and lon to get his city's current weather as an element of the returned list
     func getCitiesList(currentlat: Double?, currentLon: Double?, onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
-        
-        var firstCity: CityWeatherModel = CityWeatherModel() // empty object
-        var restOfCities = [CityWeatherModel]()
-        
-        if isConnectedToInternet() {
-            
-            // dispatch group used to make sure that success closure will be called after the first element and the rest of elements are fetched
-            // Note: get first city and get the rest of cities are called at the same time because they are independant and that is a trick that saves time.
+        if isInternetConnected {
+            var firstCity: CityWeatherModel = CityWeatherModel() // empty object
+            var savedCities = [CityWeatherModel]()
+            // dispatch group used to make sure that success closure will be called after the first element and the database elements are fetched
+            // Note: get first city and get the database cities are called at the same time because they are independant and that is a trick that saves time.
             let allCitiesDispatchGroup = DispatchGroup()
             
             // Get first element of the list
@@ -48,37 +46,24 @@ class HomeViewModel: BaseViewModel {
             
             
             
-            // Get the rest of elements
+            // Get database elements and update it
             allCitiesDispatchGroup.enter()
-            getRestOfCities(onSuccess: { cities in
-                    restOfCities.append(contentsOf: cities)
+            getSavedCitiesAndUpdateIt(onSuccess: { cities in
+                    savedCities.append(contentsOf: cities)
                     allCitiesDispatchGroup.leave()
             }, onAPIError: onAPIError, onConnectionError: onConnectionError)
             
             
             // notifiy main thread that cities' list is ready
             allCitiesDispatchGroup.notify(queue: .main) { [weak self] in
-                guard let self = self else {
-                    return
-                }
-                self.citiesList.append(firstCity)
-                self.citiesList.append(contentsOf: restOfCities)
-                self.storageProvider.removeAllCitiesAndForecast()
-                for city in self.citiesList {
-                    self.storageProvider.saveCityCurrentWeather(city: city)
-                }
-                onSuccess(self.citiesList)
+                self?.updateCitiesList(firstCity: firstCity, savedCities: savedCities, onFinish: onSuccess)
             }
-            
-            
         }
-        
         else {
             citiesList = storageProvider.fetchCitiesCurrentWeather()
             onSuccess(citiesList)
         }
 
-        
     }
     
     // add a city to cities list and return the all list
@@ -98,7 +83,7 @@ class HomeViewModel: BaseViewModel {
         
         citiesList = citiesList.filter { [weak self] city -> Bool in
             if city.id == id {
-                self?.storageProvider.removeCityAndForecast(cityID: city.id)
+                self?.storageProvider.removeCityAndForecast(city: city)
                 return false
             }
             return true
@@ -121,17 +106,17 @@ class HomeViewModel: BaseViewModel {
     }
     
     // get stored cities and update it with the live data
-    private func getRestOfCities(onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
+    private func getSavedCitiesAndUpdateIt(onSuccess: @escaping ([CityWeatherModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         
         let storedCities = storageProvider.fetchCitiesCurrentWeather()
         var updatedCities = [CityWeatherModel]()
-        let dispatchGroup = DispatchGroup()
+        let dispatchGroup = DispatchGroup()  // to wait until all cities are updated
         for city in storedCities {
             dispatchGroup.enter()
             getCityWeather(cityID: city.id , onSuccess: { [weak self] dto in
                 
                 // this is a critical section which needs the barrier to make sure that only one thread append at the updatedCities list
-                self?.restOfCitiesBarierQueue.async(flags: .barrier) {
+                self?.savedCitiesBarierQueue.async(flags: .barrier) {
                     updatedCities.append(dto)
                     dispatchGroup.leave()
                 }
@@ -188,13 +173,22 @@ class HomeViewModel: BaseViewModel {
         
     }
     
-    private func isConnectedToInternet() -> Bool {
-        if Network.reachability.isReachableViaWiFi || Network.reachability.isReachableOnWWAN {
-            return true
+    // remove old data from Ram and Database
+    // add new data to Ram and Database
+    private func updateCitiesList( firstCity: CityWeatherModel , savedCities: [CityWeatherModel],  onFinish: @escaping ([CityWeatherModel]) -> ()) {
+        
+        var _savedCities = savedCities
+        //check if the first city exist at database to remove it and add the updated one
+        if let index = _savedCities.firstIndex(of: firstCity) {
+            _savedCities.remove(at: index)
         }
-        else {
-            return false
-        }
+        self.citiesList.removeAll()
+        self.storageProvider.removeAllCitiesAndForecast()
+        self.citiesList.append(firstCity)
+        self.citiesList.append(contentsOf: _savedCities)
+        self.storageProvider.saveCitiesCurrentWeather(cities: self.citiesList)
+        onFinish(citiesList)
+        
     }
         
 }

@@ -30,14 +30,14 @@ class HomeViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let storageProvider = CoreDataStorageProvider()
+        let storageProvider = CoreDataStorageProvider(context: AppDelegate.viewContext)
         viewModel = HomeViewModel(storageProvider: storageProvider)
         self.router = WeatherRouter()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
-        let storageProvider = CoreDataStorageProvider()
+        let storageProvider = CoreDataStorageProvider(context: AppDelegate.viewContext)
         viewModel = HomeViewModel(storageProvider: storageProvider)
         self.router = WeatherRouter()
         super.init(nibName: nibName, bundle: bundle)

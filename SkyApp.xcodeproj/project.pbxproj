@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94182BB823B7B96A002099EB /* CityWeatherModelCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182BB723B7B96A002099EB /* CityWeatherModelCD.swift */; };
 		94235B3623B52100002E87BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B3523B52100002E87BA /* AppDelegate.swift */; };
 		94235B3823B52100002E87BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B3723B52100002E87BA /* ViewController.swift */; };
 		94235B3B23B52100002E87BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94235B3923B52100002E87BA /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		94235BAA23B56DB7002E87BA /* SelectCityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235BA923B56DB7002E87BA /* SelectCityDelegate.swift */; };
 		94455C6423B7805400EE0904 /* StorageProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94455C6323B7805400EE0904 /* StorageProviderInterface.swift */; };
 		94455C6623B7806600EE0904 /* CoreDataStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94455C6523B7806600EE0904 /* CoreDataStorageProvider.swift */; };
+		94455C6B23B7AA5000EE0904 /* CityForcastModelCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94455C6A23B7AA5000EE0904 /* CityForcastModelCD.swift */; };
 		9452652723B62404001415B1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652623B62404001415B1 /* APIError.swift */; };
 		9452652923B6241A001415B1 /* RequestExecuterCreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652823B6241A001415B1 /* RequestExecuterCreatorFactory.swift */; };
 		9452652B23B62431001415B1 /* BaseAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452652A23B62431001415B1 /* BaseAPIProtocol.swift */; };
@@ -83,6 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94182BB723B7B96A002099EB /* CityWeatherModelCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherModelCD.swift; sourceTree = "<group>"; };
 		94235B3223B52100002E87BA /* SkyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94235B3523B52100002E87BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94235B3723B52100002E87BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		94235BA923B56DB7002E87BA /* SelectCityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityDelegate.swift; sourceTree = "<group>"; };
 		94455C6323B7805400EE0904 /* StorageProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProviderInterface.swift; sourceTree = "<group>"; };
 		94455C6523B7806600EE0904 /* CoreDataStorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorageProvider.swift; sourceTree = "<group>"; };
+		94455C6A23B7AA5000EE0904 /* CityForcastModelCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForcastModelCD.swift; sourceTree = "<group>"; };
 		9452652123B6235C001415B1 /* FiveDaysForecastAPIResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPIResponseDTO.swift; sourceTree = "<group>"; };
 		9452652323B62379001415B1 /* FiveDaysForecastAPIRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysForecastAPIRequestDTO.swift; sourceTree = "<group>"; };
 		9452652623B62404001415B1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -170,6 +174,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94182BB923B7EC57002099EB /* DataBaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				94455C6A23B7AA5000EE0904 /* CityForcastModelCD.swift */,
+				94182BB723B7B96A002099EB /* CityWeatherModelCD.swift */,
+			);
+			path = DataBaseModels;
+			sourceTree = "<group>";
+		};
 		94235B2923B52100002E87BA = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +371,7 @@
 			children = (
 				94455C6323B7805400EE0904 /* StorageProviderInterface.swift */,
 				94455C6523B7806600EE0904 /* CoreDataStorageProvider.swift */,
+				94182BB923B7EC57002099EB /* DataBaseModels */,
 			);
 			path = StorageProvider;
 			sourceTree = "<group>";
@@ -591,6 +605,7 @@
 				9476F10623B67AEB0072CE4C /* HomeViewController + ChooseCityProtocol.swift in Sources */,
 				94235B7E23B5349E002E87BA /* WeatherRouterProtocol.swift in Sources */,
 				9452655C23B65105001415B1 /* FiveDaysForecastAPIResponseDTO.swift in Sources */,
+				94455C6B23B7AA5000EE0904 /* CityForcastModelCD.swift in Sources */,
 				94235B8323B5359C002E87BA /* HomeViewModel.swift in Sources */,
 				94235B8023B534B4002E87BA /* WeatherRouter.swift in Sources */,
 				94455C6423B7805400EE0904 /* StorageProviderInterface.swift in Sources */,
@@ -624,6 +639,7 @@
 				9476F10E23B6A7060072CE4C /* HomeViewController + HomeCellDelegate.swift in Sources */,
 				9452652923B6241A001415B1 /* RequestExecuterCreatorFactory.swift in Sources */,
 				94235BAA23B56DB7002E87BA /* SelectCityDelegate.swift in Sources */,
+				94182BB823B7B96A002099EB /* CityWeatherModelCD.swift in Sources */,
 				94235B8B23B56009002E87BA /* DetailsViewController.swift in Sources */,
 				9476F10823B698480072CE4C /* Reachability.swift in Sources */,
 				94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */,
@@ -797,6 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR464Z54H6;
 				INFOPLIST_FILE = SkyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,6 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR464Z54H6;
 				INFOPLIST_FILE = SkyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

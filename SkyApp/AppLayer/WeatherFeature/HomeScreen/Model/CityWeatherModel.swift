@@ -8,7 +8,9 @@
 
 import Foundation
 
-class CityWeatherModel {
+class CityWeatherModel: Equatable {
+
+    
     
     // MARK: - Properties
     var id: Int
@@ -31,4 +33,13 @@ class CityWeatherModel {
         self.description = ""
         self.temp = -1
     }
+    
+    // MARK: - Methods
+    static func == (lhs: CityWeatherModel, rhs: CityWeatherModel) -> Bool {
+        if lhs.id == rhs.id {
+            return true
+        }
+        return false
+    }
+    
 }

@@ -12,7 +12,8 @@ protocol StorageProviderInterface {
     func fetchCitiesCurrentWeather() -> [CityWeatherModel]
     func fetchCityForecast(cityID: Int) -> ForecastModel?
     func saveCityCurrentWeather(city: CityWeatherModel)
+    func saveCitiesCurrentWeather(cities: [CityWeatherModel])
     func saveCityForecast(city: ForecastModel)
-    func removeCityAndForecast(cityID: Int)
+    func removeCityAndForecast(city: CityWeatherModel)
     func removeAllCitiesAndForecast()
 }

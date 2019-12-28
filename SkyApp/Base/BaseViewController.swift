@@ -71,14 +71,6 @@ class BaseViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    func isConnectedToInternet() -> Bool {
-        if Network.reachability.isReachableViaWiFi || Network.reachability.isReachableOnWWAN {
-          return true
-        }
-        else {
-          return false
-        }
-    }
     
     
     
