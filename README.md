@@ -1,7 +1,7 @@
 # SkyApp
 
-The idea of the architecture is that I supposed that I am putting the architecture of a big product with multiple applications. 
-Every layer could be an external module that can be reused in multiple applications without need to rewrite the code. (Example: B2B applications).
+ I assumed that I am putting an architecture of a big product with multiple applications. 
+Every layer could be an external module that can be reused at multiple applications without need to rewrite the code. (Example: B2B applications).
 
 SkyApp is consists of :-
 
