@@ -89,7 +89,7 @@ class HomeViewModel: BaseViewModel {
         
         citiesList = citiesList.filter { [weak self] city -> Bool in
             if city.id == id {
-                self?.storageProvider.removeCityAndForecast(city: city)
+                self?.storageProvider.removeCityCurrentWeather(city: city)
                 return false
             }
             return true
@@ -189,7 +189,7 @@ class HomeViewModel: BaseViewModel {
             _savedCities.remove(at: index)
         }
         self.citiesList.removeAll()
-        self.storageProvider.removeAllCitiesAndForecast()
+        self.storageProvider.removeAllCitiesCurrentWeather()
         self.citiesList.append(firstCity)
         self.citiesList.append(contentsOf: _savedCities)
         self.storageProvider.saveCitiesCurrentWeather(cities: self.citiesList)

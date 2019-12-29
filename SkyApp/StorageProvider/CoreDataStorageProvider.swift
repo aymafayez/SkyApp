@@ -59,7 +59,7 @@ class CoreDataStorageProvider: StorageProviderInterface {
         
     }
     
-    func removeCityAndForecast(city: CityWeatherModel) {
+    func removeCityCurrentWeather(city: CityWeatherModel) {
         
         let request: NSFetchRequest<CityCurrentWeatherModelCD> = CityCurrentWeatherModelCD.fetchRequest()
         if let result = try? context.fetch(request) {
@@ -74,7 +74,7 @@ class CoreDataStorageProvider: StorageProviderInterface {
         
     }
     
-    func removeAllCitiesAndForecast() {
+    func removeAllCitiesCurrentWeather() {
         
         let request: NSFetchRequest<CityCurrentWeatherModelCD> = CityCurrentWeatherModelCD.fetchRequest()
         if let result = try? context.fetch(request) {
@@ -86,12 +86,5 @@ class CoreDataStorageProvider: StorageProviderInterface {
     
     }
     
-    func fetchCityForecast(cityID: Int) -> ForecastModel? {
-        return nil
-    }
-    
-    func saveCityForecast(city: ForecastModel) {
-        
-    }
     
 }
