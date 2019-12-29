@@ -6,36 +6,33 @@ Every layer could be an external module that can be reused in multiple applicati
 SkyApp is consists of :-
 
 1-	AppLayer :- Responsible for the features at the application
-•	MVVM design battern is used to avoid massive controllers.
-•	Routing battern is used to move the navigation responsibility from the controller to the router.
-•	Dependency injection is used at view controllers, view models, and models.
-•	I did not have time to write unit tests for the applayer but I used dependency injection to make it testable.
+-	MVVM design battern is used to avoid massive controllers.
+-	Routing battern is used to move the navigation responsibility from the controller to the router.
+-	Dependency injection is used at view controllers, view models, and models.
+-	I did not have time to write unit tests for the applayer but I used dependency injection to make it testable.
 
 
 2-	NetworkLayer (Unit tested) :- Responsible for the HTTP Requests
-•	Unit tests are written with full code coverage.                                                                      
-
-•	It is designed to be a simple network layer that serve the app.
-
-•	It uses protocol oriented programming and dependency injection therefore it is testable.
-
-•	It can be extendable using open closed principle, for example: interceptors can be added easily to intercept both request and response.
+- Unit tests are written with full code coverage.                                                                      
+-	It is designed to be a simple network layer that serve the app.
+-	It uses protocol oriented programming and dependency injection therefore it is testable.
+-	It can be extendable using open closed principle, for example: interceptors can be added easily to intercept both request and response.
 
 
 3-	StorageLayer :- Responsible for Database (CoreData at our app)
-•	It is injected into application using its protocol.
-•	User can easily change the type of storage without need to change any code at application layer, he only has to implement    the interface of storage layer.
-• Coredata is used to provide an object-oriented interaction with Database.
+- It is injected into application using its protocol.
+-	User can easily change the type of storage without need to change any code at application layer, he only has to implement    the interface of storage layer.
+- Coredata is used to provide an object-oriented interaction with Database.
 
 
 4-	APIManager :- Responsible for All APIS at the app
-•	Generics are used to give the api the request and the response during the initialization.
-•	BaseAPI is used to implement the shared functions and properties between all apis like base url and access key.
-•	Every api will inherit base layer should provide its url and http method.
+-	Generics are used to give the api the request and the response during the initialization.
+-	BaseAPI is used to implement the shared functions and properties between all apis like base url and access key.
+-	Every api will inherit base layer should provide its url and http method.
 
 
 5-	DTO :- Resposible for all APIs' request and response model
-•	 It contains all requests and responses DTOs that confirms to the Encodable and Decodable protocol.
+-	 It contains all requests and responses DTOs that confirms to the Encodable and Decodable protocol.
 
 
 Challenges :-
