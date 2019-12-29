@@ -69,6 +69,7 @@ class HomeViewModel: BaseViewModel {
         
         if citiesList.count == 5 {
             onAPIError("Can't add more than five cities")
+            return
         }
         if isCityIdExist(id: id, citiesList: citiesList) {
             onAPIError("City is already exist")

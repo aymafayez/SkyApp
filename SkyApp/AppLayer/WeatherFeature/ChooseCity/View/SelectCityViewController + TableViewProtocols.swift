@@ -21,7 +21,7 @@ extension SelectCityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchCountryTableViewCellEnum.CellReuseIdentifier.rawValue) as? SelectCityTableViewCell
-        cell?.nameLabel.text = citiesList[indexPath.row].name
+        cell?.nameLabel.text = citiesList[indexPath.row].name + " , " +  citiesList[indexPath.row].country.rawValue
         return  cell ?? UITableViewCell()
     }
     
