@@ -14,15 +14,13 @@ class HomeViewModel: BaseViewModel {
     // MARK: - Properties
     private var citiesList = [CityWeatherModel]()
     private var storageProvider: StorageProviderInterface
-    private var savedCitiesBarierQueue: DispatchQueue
+    private var storedCitiesCustomQueue: DispatchQueue
     
     
     // MARK: - Initializers
     init(storageProvider: StorageProviderInterface) {
         self.storageProvider = storageProvider
-        savedCitiesBarierQueue = DispatchQueue(
-            label: "",
-            attributes: .concurrent)
+        storedCitiesCustomQueue = DispatchQueue(label: "",attributes: .concurrent)
         super.init()
     }
 
@@ -34,7 +32,7 @@ class HomeViewModel: BaseViewModel {
             var firstCity: CityWeatherModel = CityWeatherModel() // empty object
             var savedCities = [CityWeatherModel]()
             // dispatch group used to make sure that success closure will be called after the first element and the database elements are fetched
-            // Note: get first city and get the database cities are called at the same time because they are independant and that is a trick that saves time.
+            // Note: get first city and get database cities are called at the same time because they are independant and that is a trick that saves time.
             let allCitiesDispatchGroup = DispatchGroup()
             
             // Get first element of the list
@@ -72,7 +70,7 @@ class HomeViewModel: BaseViewModel {
         if citiesList.count == 5 {
             onAPIError("Can't add more than five cities")
         }
-        else if isCityIdExist(id: id, citiesList: citiesList) {
+        if isCityIdExist(id: id, citiesList: citiesList) {
             onAPIError("City is already exist")
         }
         else {
@@ -85,7 +83,7 @@ class HomeViewModel: BaseViewModel {
         }
     }
     
-    // remmove a city from cities list and return the list
+    // remove a city from cities list and return the list
     func removeCity(id: Int, onFinish: @escaping ([CityWeatherModel]) -> ()) {
         
         citiesList = citiesList.filter { [weak self] city -> Bool in
@@ -123,7 +121,7 @@ class HomeViewModel: BaseViewModel {
             getCityWeather(cityID: city.id , onSuccess: { [weak self] dto in
                 
                 // this is a critical section which needs the barrier to make sure that only one thread append at the updatedCities list
-                self?.savedCitiesBarierQueue.async(flags: .barrier) {
+                self?.storedCitiesCustomQueue.async(flags: .barrier) {
                     updatedCities.append(dto)
                     dispatchGroup.leave()
                 }
@@ -131,7 +129,7 @@ class HomeViewModel: BaseViewModel {
             }, onAPIError: onAPIError, onConnectionError: onConnectionError)
         }
         
-        // notify the main thread that rest of cities' list are ready
+        // notify the main thread that database cities are ready
         dispatchGroup.notify(queue: .main) {
             onSuccess(updatedCities)
         }

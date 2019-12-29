@@ -80,10 +80,10 @@ class HomeViewController: BaseViewController {
             self?.hideLoadingView()
         }, onAPIError: { [weak self] error in
             self?.hideLoadingView()
-            self?.showErrorView(title: "API Error", description: error)
+            self?.showErrorView(title: "", description: error)
         }) { [weak self] error in
             self?.hideLoadingView()
-            self?.showErrorView(title: "Connection Error", description: error)
+            self?.showErrorView(title: "", description: error)
         }
     }
 

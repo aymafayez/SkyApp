@@ -20,13 +20,13 @@ class DetailsViewModel: BaseViewModel {
     
     // MARK: - Methods
     func getFiveDaysForecast(onSuccess: @escaping ([ForecastModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
-        let dto = FiveDaysWeatherAPIRequestDTO(id: id)
+        let dto = FiveDaysForecastAPIRequestDTO(id: id)
         let api = FiveDaysForecastAPI(requestDTO: dto, onSuccess: { [weak self] dto in
             var forcastList = [ForecastModel]()
             if let list  = dto?.list {
                 for element in list {
-                    let date = self?.convert(date: element.dtTxt , from: backEndDateFormat , to: appDateTimeFormat)
-                    let forcastElement = ForecastModel(day: date ?? "" , temp: element.main.temp)
+                    guard let date = self?.convert(date: element.dtTxt , from: backEndDateFormat , to: appDateTimeFormat) else { continue }
+                    let forcastElement = ForecastModel(day: date, temp: element.main.temp)
                     forcastList.append(forcastElement)
                 }
             }

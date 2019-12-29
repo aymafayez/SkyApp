@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct  FiveDaysWeatherAPIRequestDTO: Codable {
+struct  FiveDaysForecastAPIRequestDTO: Codable {
     let id: Int?
     let lat: Double?
     let lon: Double?

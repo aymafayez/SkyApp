@@ -45,10 +45,6 @@ class DetailsViewController: BaseViewController {
         getforecastList()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-    }
-    
     private func setupTableView() {
         tableView.register(UINib(nibName: DetailsTableViewCellEnum.nibName.rawValue, bundle: nil), forCellReuseIdentifier: DetailsTableViewCellEnum.CellReuseIdentifier.rawValue)
         tableView.backgroundView = UIImageView(image: UIImage(named: ImagesEnum.HomeBackGroundImage.rawValue))
@@ -67,9 +63,9 @@ class DetailsViewController: BaseViewController {
             self?.forecastList = List
             self?.tableView.reloadData()
         }, onAPIError: { [weak self] error in
-            self?.showErrorView(title: "API Error", description: error)
+            self?.showErrorView(title: "", description: error)
         }, onConnectionError:  { [weak self] error in
-            self?.showErrorView(title:  "Connection Error", description: error)
+            self?.showErrorView(title:  "", description: error)
         })
     }
 

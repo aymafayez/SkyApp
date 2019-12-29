@@ -18,10 +18,10 @@ extension HomeViewController: SelectCityDelegate {
             self?.hideLoadingView()
         }, onAPIError: { [weak self] error in
             self?.hideLoadingView()
-            self?.showErrorView(title: "error", description: error)
+            self?.showErrorView(title: "", description: error)
         }) { [weak self] error in
             self?.hideLoadingView()
-            self?.showErrorView(title: "error", description: error)
+            self?.showErrorView(title: "", description: error)
         }
     }
     

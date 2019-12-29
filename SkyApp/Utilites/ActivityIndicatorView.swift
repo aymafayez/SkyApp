@@ -19,7 +19,7 @@ public class ActivityIndicatorView: UIView {
         
         // Background view configurations
         let bgView = UIView()
-        bgView.backgroundColor = UIColor.lightGray
+        bgView.backgroundColor = UIColor.gray
         bgView.alpha = 0.7
         bgView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(bgView)

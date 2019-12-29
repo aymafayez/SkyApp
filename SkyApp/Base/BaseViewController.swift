@@ -47,16 +47,21 @@ class BaseViewController: UIViewController {
     }
     
     public func showLoadingView() {
-        if let lv = loadingView {
-            self.view.bringSubviewToFront(lv)
-        } else {
-            loadingView = ActivityIndicatorView()
-            self.view.addSubview(loadingView!)
-            loadingView?.translatesAutoresizingMaskIntoConstraints = false
-            let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[lv]|", options: .alignAllCenterY, metrics: nil, views: ["lv": loadingView!])
-            NSLayoutConstraint.activate(hConstraints)
-            let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[lv]|", options: .alignAllCenterX, metrics: nil, views: ["lv": loadingView!])
-            NSLayoutConstraint.activate(vConstraints)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            if let lv = self.loadingView {
+                self.view.bringSubviewToFront(lv)
+            } else {
+                self.loadingView = ActivityIndicatorView()
+                self.view.addSubview(self.loadingView!)
+                self.loadingView?.translatesAutoresizingMaskIntoConstraints = false
+                let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[lv]|", options: .alignAllCenterY, metrics: nil, views: ["lv": self.self.loadingView!])
+                NSLayoutConstraint.activate(hConstraints)
+                let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[lv]|", options: .alignAllCenterX, metrics: nil, views: ["lv": self.loadingView!])
+                NSLayoutConstraint.activate(vConstraints)
+            }
         }
     }
     

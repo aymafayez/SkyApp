@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FiveDaysForecastAPI: BaseAPI<FiveDaysWeatherAPIRequestDTO,FiveDaysWeatherAPIResponseDTO> {
+class FiveDaysForecastAPI: BaseAPI<FiveDaysForecastAPIRequestDTO,FiveDaysForecastAPIResponseDTO> {
     override var relativeApiPath: String {
         return "/data/2.5/forecast?"
     }

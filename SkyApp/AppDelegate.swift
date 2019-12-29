@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupRootViewController() {
         let navVC = UINavigationController()
         navVC.navigationBar.isHidden = false
+        let img = UIImage(named: ImagesEnum.DetailsBarImage.rawValue)
+        navVC.navigationBar.setBackgroundImage(img, for: .default)
+        navVC.navigationBar.tintColor = UIColor.white
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         let router = WeatherRouter()
