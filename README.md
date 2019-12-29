@@ -38,7 +38,7 @@ SkyApp is consists of :-
 Challenges :-
 
 1-	How to get the current location weather and the Database cities weather at the same time?
--	Using dispatch group, current location and saved cities weather are got at the same time and after those two operations are finished, main thread is notified to update the UI.
+-	Using dispatch group, current location and saved cities weather are got at the same time and after those two operations are  finished, main thread is notified to update the UI.
 
 2-	How to get the updated weather of saved cities and avoid race conditions problem?
 -	Using barrier, barrier avoid many threads to write at the array at the same time
