@@ -17,8 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupRootViewController()
         return true
     }
+    
+    private func setupRootViewController() {
+        let navVC = UINavigationController()
+        navVC.navigationBar.isHidden = false
+        let img = UIImage(named: ImagesEnum.DetailsBarImage.rawValue)
+        navVC.navigationBar.setBackgroundImage(img, for: .default)
+        navVC.navigationBar.tintColor = UIColor.white
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
+        let router = WeatherRouter()
+        router.start(navigationController: navVC)
+    }
+    
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -87,6 +102,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    static var persistentContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    
+    static var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
     }
 
 }

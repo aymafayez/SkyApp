@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectCityViewController" customModule="SkyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="UqR-pn-Ugq" id="mt4-Mw-XSa"/>
+                <outlet property="tableView" destination="E81-hd-cbZ" id="4nC-qN-LKx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2z-xn-TQd">
+                    <rect key="frame" x="362" y="49" width="37" height="30"/>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="doneButtonIsPressed:" destination="-1" eventType="touchUpInside" id="QYi-wN-zzF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-uB-Gmi">
+                    <rect key="frame" x="15" y="49" width="48" height="30"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonIsPressed:" destination="-1" eventType="touchUpInside" id="riX-Ds-VET"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E81-hd-cbZ">
+                    <rect key="frame" x="0.0" y="89" width="414" height="807"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" id="UqR-pn-Ugq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="E81-hd-cbZ" firstAttribute="top" secondItem="O2z-xn-TQd" secondAttribute="bottom" constant="10" id="PWe-kZ-awm"/>
+                <constraint firstItem="E81-hd-cbZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PtT-xY-JzO"/>
+                <constraint firstAttribute="bottom" secondItem="E81-hd-cbZ" secondAttribute="bottom" id="T3j-It-aOC"/>
+                <constraint firstItem="wFO-uB-Gmi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="URo-Sj-5sM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O2z-xn-TQd" secondAttribute="trailing" constant="15" id="cF1-8f-Lnt"/>
+                <constraint firstItem="O2z-xn-TQd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="mT7-SY-PS8"/>
+                <constraint firstItem="wFO-uB-Gmi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="pWX-5U-OXC"/>
+                <constraint firstItem="E81-hd-cbZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xAG-z6-nZe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CityCurrentWeatherModelCD" representedClassName=".CityCurrentWeatherModelCD" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weatherDescription" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CityForcastModelCD" representedClassName=".CityForcastModelCD" syncable="YES" codeGenerationType="category">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CityForcastModelCD" positionX="155.06640625" positionY="-63.19921875" width="128" height="75"/>
+        <element name="CityCurrentWeatherModelCD" positionX="162" positionY="-9" width="128" height="105"/>
+    </elements>
 </model>
