@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - CurrentWeatherAPIRequestDTO
+// MARK: -  CurrentWeatherAPIRequestDTO
 struct  CurrentWeatherAPIRequestDTO: Codable {
     let id: Int?
     let lat: Double?
