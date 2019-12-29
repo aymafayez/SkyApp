@@ -14,7 +14,6 @@
 		94235B3E23B52100002E87BA /* SkyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94235B3C23B52100002E87BA /* SkyApp.xcdatamodeld */; };
 		94235B4023B52102002E87BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94235B3F23B52102002E87BA /* Assets.xcassets */; };
 		94235B4323B52102002E87BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94235B4123B52102002E87BA /* LaunchScreen.storyboard */; };
-		94235B4E23B52102002E87BA /* SkyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B4D23B52102002E87BA /* SkyAppTests.swift */; };
 		94235B5C23B522B3002E87BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B5A23B522B3002E87BA /* HomeViewController.swift */; };
 		94235B5D23B522B3002E87BA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94235B5B23B522B3002E87BA /* HomeViewController.xib */; };
 		94235B6323B52DD8002E87BA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94235B6123B52DD8002E87BA /* HomeTableViewCell.swift */; };
@@ -64,6 +63,8 @@
 		947494C423B944A800CA47E6 /* CurrentWeatherAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947494C223B944A800CA47E6 /* CurrentWeatherAPIResponseDTO.swift */; };
 		947494C723B944B000CA47E6 /* ForecastWeatherAPIRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947494C523B944B000CA47E6 /* ForecastWeatherAPIRequestDTO.swift */; };
 		947494C823B944B000CA47E6 /* ForecastWeatherAPIResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947494C623B944B000CA47E6 /* ForecastWeatherAPIResponseDTO.swift */; };
+		947494CD23B94A9900CA47E6 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947494CC23B94A9900CA47E6 /* Mocks.swift */; };
+		947494CF23B94AC000CA47E6 /* URLSessionRequestExecuterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947494CE23B94AC000CA47E6 /* URLSessionRequestExecuterTests.swift */; };
 		9476F0FE23B6673C0072CE4C /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476F0FD23B6673C0072CE4C /* CityModel.swift */; };
 		9476F10023B66A570072CE4C /* cityList.json in Resources */ = {isa = PBXBuildFile; fileRef = 9476F0FF23B66A560072CE4C /* cityList.json */; };
 		9476F10423B677BB0072CE4C /* SelectCityViewController + SearchBarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476F10323B677BB0072CE4C /* SelectCityViewController + SearchBarProtocols.swift */; };
@@ -95,7 +96,6 @@
 		94235B4223B52102002E87BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94235B4423B52102002E87BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94235B4923B52102002E87BA /* SkyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94235B4D23B52102002E87BA /* SkyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyAppTests.swift; sourceTree = "<group>"; };
 		94235B4F23B52103002E87BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94235B5A23B522B3002E87BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94235B5B23B522B3002E87BA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -146,6 +146,8 @@
 		947494C223B944A800CA47E6 /* CurrentWeatherAPIResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAPIResponseDTO.swift; sourceTree = "<group>"; };
 		947494C523B944B000CA47E6 /* ForecastWeatherAPIRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastWeatherAPIRequestDTO.swift; sourceTree = "<group>"; };
 		947494C623B944B000CA47E6 /* ForecastWeatherAPIResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastWeatherAPIResponseDTO.swift; sourceTree = "<group>"; };
+		947494CC23B94A9900CA47E6 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		947494CE23B94AC000CA47E6 /* URLSessionRequestExecuterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestExecuterTests.swift; sourceTree = "<group>"; };
 		9476F0FD23B6673C0072CE4C /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		9476F0FF23B66A560072CE4C /* cityList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cityList.json; sourceTree = "<group>"; };
 		9476F10323B677BB0072CE4C /* SelectCityViewController + SearchBarProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectCityViewController + SearchBarProtocols.swift"; sourceTree = "<group>"; };
@@ -225,7 +227,7 @@
 		94235B4C23B52102002E87BA /* SkyAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				94235B4D23B52102002E87BA /* SkyAppTests.swift */,
+				947494C923B94A2300CA47E6 /* NetworkLayer */,
 				94235B4F23B52103002E87BA /* Info.plist */,
 			);
 			path = SkyAppTests;
@@ -480,6 +482,31 @@
 			path = CurrenctWeather;
 			sourceTree = "<group>";
 		};
+		947494C923B94A2300CA47E6 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				947494CB23B94A6F00CA47E6 /* URL */,
+				947494CA23B94A6800CA47E6 /* Mocks */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		947494CA23B94A6800CA47E6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				947494CC23B94A9900CA47E6 /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		947494CB23B94A6F00CA47E6 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				947494CE23B94AC000CA47E6 /* URLSessionRequestExecuterTests.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
 		9476F0FC23B666E00072CE4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +577,7 @@
 					};
 					94235B4823B52102002E87BA = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 94235B3123B52100002E87BA;
 					};
 				};
@@ -666,7 +694,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94235B4E23B52102002E87BA /* SkyAppTests.swift in Sources */,
+				947494CD23B94A9900CA47E6 /* Mocks.swift in Sources */,
+				947494CF23B94AC000CA47E6 /* URLSessionRequestExecuterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +886,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SkyAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -866,6 +896,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sky.com.SkyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyApp.app/SkyApp";
@@ -877,6 +908,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SkyAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
