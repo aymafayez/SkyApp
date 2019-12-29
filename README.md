@@ -13,9 +13,12 @@ SkyApp is consists of :-
 
 
 2-	NetworkLayer (Unit tested) :- Responsible for the HTTP Requests
-•	Unit tests are written with full code coverage.
+•	Unit tests are written with full code coverage.                                                                      
+
 •	It is designed to be a simple network layer that serve the app.
+
 •	It uses protocol oriented programming and dependency injection therefore it is testable.
+
 •	It can be extendable using open closed principle, for example: interceptors can be added easily to intercept both request and response.
 
 
