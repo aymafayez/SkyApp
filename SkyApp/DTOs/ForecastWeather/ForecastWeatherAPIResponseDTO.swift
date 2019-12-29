@@ -11,7 +11,7 @@ import Foundation
 import Foundation
 
 // MARK: - FiveDaysWeatherAPIResponseDTO
-struct FiveDaysForecastAPIResponseDTO: Codable {
+struct ForecastWeatherAPIResponseDTO: Codable {
     let cod: String
     let message, cnt: Int
     let list: [List]

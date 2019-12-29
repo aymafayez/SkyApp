@@ -20,7 +20,7 @@ class DetailsViewModel: BaseViewModel {
     
     // MARK: - Methods
     func getFiveDaysForecast(onSuccess: @escaping ([ForecastModel]) -> (), onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
-        let dto = FiveDaysForecastAPIRequestDTO(id: id)
+        let dto = ForecastWeatherAPIRequestDTO(id: id)
         let api = FiveDaysForecastAPI(requestDTO: dto, onSuccess: { [weak self] dto in
             var forcastList = [ForecastModel]()
             if let list  = dto?.list {
