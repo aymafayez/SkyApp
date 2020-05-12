@@ -1,24 +1,6 @@
 # SkyApp
 
-App Coding Task
-The goal of this task is to check your knowledge, speed, code quality, UI background and testing techniques.
 
-Requirements
-Create a simple mobile application that:
-
-Utilize a weather API (http://openweathermap.org/API for example) to search for a city and get the forecast.
-You can add up to 5 cities to the main activity. You can also remove cities from the main activity.
-When clicking on one of the cities from the main activity, a 5 days forecast should be displayed.
-When clicking on one of the cities from the search box dropdown, a 5 days forecase should be displayed, while having the ability to include it in the main activity if it's not already included.
-The main activity will have the 1st city added by default, which will be based on the GPS location. If the user doesn't give the location permissions, then the first default city will be London, UK.
-Save the data for offline usage.
-Acceptance Criteria:
-Coded in Swift 3+, using MVVM design pattern.
-If you are going to recieve this assessment app for review, would you accept it to hire the developer?
-While building this app:
-use GIT and commit as often as possible using descriptive descriptions.
-
-Documentation
 
  I assumed that I am putting an architecture of a big product with multiple applications. 
 Every layer could be an external module that can be reused at multiple applications without need to rewrite the code. (Example: B2B applications).
